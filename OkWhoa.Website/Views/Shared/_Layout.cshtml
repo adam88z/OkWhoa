@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKWhoa</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript" src="~/Scripts/Slideshow.js"></script>
+
+    <script>
+        //this function, "modalAjax" is the single function that all the above ajax calls will run upon a successful ajax response.
+        function modalAjax() {
+            $("img").on('click', function () {
+                $("#mymodal").show();
+                var meeks = $(this).attr('src');
+                $("#innerModalImage").attr('src', meeks);
+            })
+
+            $(this).mousedown(function () {
+                $("#mymodal").hide();
+            });
+
+            $(document).mouseup(function (e) {
+                if (!$("#myInnerModal").is(e.target) && $("#myInnerModal").has(e.target).length === 0) {
+                    $('#mymodal').hide();
+                }
+            })
+        };
+    </script>
+
+    <style>
+        #myInnerModal {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            height: 400px;
+            width: 400px;
+            /*border: 3px dashed red;*/
+            margin: 3% auto;
+            width: 96%;
+            z-index: 40001;
+        }
+
+        #innerModalImage {
+            margin: 0 auto;
+            width: 98%;
+            z-index: 40001;
+            /*border:3px dotted yellow;*/
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="DesignBanner" class="hidden" style="">
+        @* the DesignBanner and the script to fade the stacks of images are included here because
+            they used to be in a User Control and I don't know how to do things the MVC way. *@
+
+        <div class="clouds" style="top:6%;left:1%;">
+            <div id="cycler1" class="cycler">
+                <img src="~/Content/images/layout/home_07.jpg" alt="&nbsp;" class="active" />
+                <img src="~/Content/images/layout/home_01.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/home_02.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/home_03.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/home_04.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/home_05.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/home_06.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/home_08.jpg" alt="&nbsp;" />
+            </div>
+        </div>
+
+        <div class="clouds" style="background-color:transparent;top:1.5%; left: 22%;">
+            <div id="cycler2" class="cycler">
+                <img src="~/Content/images/layout/web_development_09.jpg" alt="&nbsp;" class="active" />
+                <img src="~/Content/images/layout/web_development_01.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/web_development_02.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/web_development_03.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/web_development_04.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/web_development_05.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/web_development_06.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/web_development_07.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/web_development_08.jpg" alt="&nbsp;" />
+            </div>
+        </div>
+
+        <div class="clouds" style="background-color:#FFE0A8;  overflow:hidden;  top:3%; left:42%;">
+            <div id="cycler3" class="cycler">
+                <img src="~/Content/images/layout/media_09.jpg" alt="&nbsp;" class="active" />
+                <img src="~/Content/images/layout/media_01.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/media_02.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/media_03.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/media_04.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/media_05.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/media_06.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/media_07.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/media_08.jpg" alt="&nbsp;" />
+            </div>
+            <div class="yoink testAnimation">Photography</div><!---->
+        </div>
+
+        <div class="clouds" style="background-color:#EAFFAA; overflow:hidden;top:7%; left:62%;">
+            <div id="cycler4" class="cycler">
+                <img src="~/Content/images/layout/design_13.jpg" alt="&nbsp;" class="active" />
+                <img src="~/Content/images/layout/design_01.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_02.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_03.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_04.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_05.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_06.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_07.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_08.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_09.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_10.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_11.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_12.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/design_14.jpg" alt="&nbsp;" />
+            </div>
+        </div>
+
+        <div class="clouds" style="background-color:#B9FFE4;overflow:hidden;top:2.5%; left:82%; ">
+            <div id="cycler5" class="cycler">
+                <img src="~/Content/images/layout/analysis_07.jpg" alt="&nbsp;" class="active" />
+                <img src="~/Content/images/layout/analysis_06.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/analysis_08.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/analysis_09.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/analysis_02.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/analysis_03.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/analysis_04.jpg" alt="&nbsp;" />
+                <img src="~/Content/images/layout/analysis_05.jpg" alt="&nbsp;" />
+            </div>
+        </div>
+    </div>
+    <!-- end DesignBanner div -->
+    <!-- the following script is used on the images inside of DesignBanner. It uses jQuery to fade a stack of images in and out http://www.simonbattersby.com/blog/simple-jquery-image-crossfade/-->
+    <script type="text/javascript">
+        function cycleImages(container) {
+            var $active = container.find('.active');
+            var $next = ($active.next().length > 0) ? $active.next() : container.find('img:first');
+            $next.css('z-index', 2);//move the next image up the pile
+
+            $active.fadeOut(4500, function () {//fade out the top image
+                $active.css('z-index', 1).show().removeClass('active');//reset the z-index and unhide the image
+                $next.css('z-index', 3).addClass('active');//make the next image the top one
+            });
+        }
+
+        $(document).ready(function () {
+            setInterval(function () { cycleImages($('#cycler1')) }, 7500);
+            setInterval(function () { cycleImages($('#cycler2')) }, 6850);
+            setInterval(function () { cycleImages($('#cycler3')) }, 7050);
+            setInterval(function () { cycleImages($('#cycler4')) }, 5800);
+            setInterval(function () { cycleImages($('#cycler5')) }, 6200);
+            /*setInterval(function () { cycleImages($('#cycler6')) }, 4200);
+            setInterval(function () { cycleImages($('#cycler7')) }, 4800);
+            setInterval(function () { cycleImages($('#cycler8')) }, 6800);*/ /* cycler 6 7 and 8 appear to be unused.*/
+        })
+    </script>
+
+
+    @* hide all the banners for all the main pages - unhide them on each page*@
+    <img id="banner0" class="masterBanner" src="~/Content/images/pagebanners/Fresh_horiz_09_3000X200.jpg" />  @*Lucy's rocks*@
+    <img id="banner1" class="masterBanner hidden" src="~/Content/images/pagebanners/Fresh_horiz_10_3000X200.jpg" />
+    <img id="banner2" class="masterBanner hidden" src="~/Content/images/pagebanners/Fresh_horiz_02_3000X200.jpg" />
+    <img id="banner3" class="masterBanner hidden" src="~/Content/images/pagebanners/Fresh_horiz_12_3000X200.jpg" />
+    <img id="banner4" class="masterBanner hidden" src="~/Content/images/pagebanners/Fresh_horiz_06_3000X200.jpg" />
+    <img id="banner5" class="masterBanner hidden" src="~/Content/images/pagebanners/Banner_BA2C7619.jpg" />
+    <img id="banner6" class="masterBanner hidden" src="~/Content/images/pagebanners/Banner_BA2C7644.jpg" />
+    <img id="banner7" class="masterBanner hidden" src="~/Content/images/pagebanners/Banner_BA2C7761.jpg" />
+
+
+
+
+    @*The actual layout of the site is:
+        #sitecontainer,   -- wraps around everything
+        #navmain          -- holds main navigation buttons
+        #navsub           -- Depending on what main menu item you are looking at, a submenu appears and other submenus supressed.
+        #sitecontent      -- all the stuff besides navigation goes in here.
+        #footer           -- footer is outside everything  *@
+
+<div id="sitecontainer" class="clearfix">
+
+    <div id="mymodal" style="position:fixed; left: 0; top: 0; height: 100vh; width: 100vw; z-index: 30000; background-color: rgba(111,111,111,.80); display: none; text-align:center;">
+        <div id="myInnerModal" style="">
+            <img id="innerModalImage" src="" alt="" style="" />
+        </div>
+    </div>
+
+
+    @*  #navmain   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*@
+    <div id="navmain" class="clearfix">
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("About Me", "AboutMe", "Home")
+        @Html.ActionLink("Experience", "Experience", "Home")
+        @Html.ActionLink("Design", "Design", "Home")
+        @Html.ActionLink("Photography", "Photography", "Home")
+    </div>
+
+    @*  #sitecontent  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*@
+    @*  The widths of navmain, sitecontent, and navsub should all add up to 100%.
+        Media Queries are used pretty heavily to adjust the widths of menu items according to screen size.*@
+    <div id="sitecontent" class="clearfix">
+        @RenderBody()
+        @* Think of @RenderBody as ContentPlaceholder. *@
+    </div>
+
+
+    @*   #navsub   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*@
+    <div id="navsub" class="clearfix">
+        @* #navsub contains the submenus.
+            These submenus are hidden on the _Layout page and unhidden on the individul pages using Javascript.
+            These started out as User Controls in an earlier project which is why the class names have the "uc" prefix. *@
+
+        <div id="ucAboutMe" class="hidden">
+            @Html.ActionLink("Trees", "Trees", "Home")
+            @Html.ActionLink("Music", "Music", "Home")
+            @Html.ActionLink("Video", "Video", "Home")
+            @Html.ActionLink("My Backyard", "MyBackyard", "Home")
+            @Html.ActionLink("Military Service", "MilitaryService", "Home")
+            @Html.ActionLink("Yoink", "Yoink", "Home")
+        </div>
+
+        <div id="ucMenuDesign" class="hidden">
+            @Html.ActionLink("Print", "DesignPrint", "Home")
+            @Html.ActionLink("Banners", "DesignBanners", "Home")
+            @Html.ActionLink("Websites", "DesignWebsites", "Home")
+        </div>
+
+        <div id="ucMenuExperience" class="hidden">
+            @Html.ActionLink("Rolls Royce", "ExperienceRollsRoyce", "Home")
+            @Html.ActionLink("ASCE", "ExperienceASCE", "Home")
+            @Html.ActionLink("Keystone", "ExperienceKeystone", "Home")
+            @Html.ActionLink("BHP", "ExperienceBHP", "Home")
+            @Html.ActionLink("UPMC", "ExperienceUPMC", "Home")
+            @Html.ActionLink("Pitt", "ExperiencePitt", "Home")
+            @Html.ActionLink("HTA", "ExperienceHTA", "Home")
+            @Html.ActionLink("Interior Energy", "ExperienceInterior", "Home")
+            @Html.ActionLink("USAF", "ExperienceUSAF", "Home")
+        </div>
+    </div>
+</div><!-- end .sitecontainer -->
+
+
+    <div class="footer">
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Design", "Design", "Home")
+        @Html.ActionLink("Experience", "Experience", "Home")
+        @Html.ActionLink("AboutMe", "AboutMe", "Home")
+        @Html.ActionLink("Photography", "Photography", "Home")
+
+    </div>
+
+
+
+
+    
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+
+
+    
+
+
+
+        
+</body>
+</html>
+
+
+
+

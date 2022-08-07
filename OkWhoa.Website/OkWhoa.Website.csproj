@@ -1,0 +1,1007 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22833A3B-6B55-40E7-80F4-8E50AEE798ED}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OkWhoa.Website</RootNamespace>
+    <AssemblyName>OkWhoa.Website</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44346</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IndexVM.cs" />
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aboutme\aboutme_Active.html" />
+    <Content Include="aboutme\aboutme_Backyard.html" />
+    <Content Include="aboutme\aboutme_Hobbies.html" />
+    <Content Include="aboutme\aboutme_HomeImprovement.html" />
+    <Content Include="aboutme\aboutme_HostPage.html" />
+    <Content Include="aboutme\aboutme_Military.html" />
+    <Content Include="aboutme\aboutme_Music.html" />
+    <Content Include="aboutme\aboutme_Trees.html" />
+    <Content Include="aboutme\aboutme_Video.html" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\HTML5_zero.css" />
+    <Content Include="Content\images\aboutme\Adam.JPG" />
+    <Content Include="Content\images\aboutme\Adam_8-15-13.jpg" />
+    <Content Include="Content\images\aboutme\Adam_DSC_3493.jpg" />
+    <Content Include="Content\images\aboutme\Admiral_Crowe_BA2C3159.jpg" />
+    <Content Include="Content\images\aboutme\Azari-013.jpg" />
+    <Content Include="Content\images\aboutme\BA2C3814.tif" />
+    <Content Include="Content\images\aboutme\BackyardBabydoll_01.jpg" />
+    <Content Include="Content\images\aboutme\BackyardBabydoll_02.jpg" />
+    <Content Include="Content\images\aboutme\BackyardBabydoll_Tucco_01.jpg" />
+    <Content Include="Content\images\aboutme\BackyardBuck.jpg" />
+    <Content Include="Content\images\aboutme\BackyardBuck2.jpg" />
+    <Content Include="Content\images\aboutme\BackyardCardinal.jpg" />
+    <Content Include="Content\images\aboutme\BackyardFlowers_01.jpg" />
+    <Content Include="Content\images\aboutme\BackyardFlowers_02.jpg" />
+    <Content Include="Content\images\aboutme\BackyardStarling.jpg" />
+    <Content Include="Content\images\aboutme\BackyardTucco_01.jpg" />
+    <Content Include="Content\images\aboutme\BackyardtURKEYS_01.jpg" />
+    <Content Include="Content\images\aboutme\BackyardtURKEYS_02.jpg" />
+    <Content Include="Content\images\aboutme\Backyard_Shrooms.jpg" />
+    <Content Include="Content\images\aboutme\Backyard_Tucco_01.jpg" />
+    <Content Include="Content\images\aboutme\Butterfly.jpg" />
+    <Content Include="Content\images\aboutme\Catcute.JPG" />
+    <Content Include="Content\images\aboutme\curry.jpg" />
+    <Content Include="Content\images\aboutme\DSC_2193_edited.jpg" />
+    <Content Include="Content\images\aboutme\Elvira.JPG" />
+    <Content Include="Content\images\aboutme\Emotions.JPG" />
+    <Content Include="Content\images\aboutme\Family_01.jpg" />
+    <Content Include="Content\images\aboutme\Family_Adam.JPG" />
+    <Content Include="Content\images\aboutme\Family_Adam_8-15-13.jpg" />
+    <Content Include="Content\images\aboutme\FishTeeth.JPG" />
+    <Content Include="Content\images\aboutme\Flamingos.JPG" />
+    <Content Include="Content\images\aboutme\Food_curry.jpg" />
+    <Content Include="Content\images\aboutme\Gun.JPG" />
+    <Content Include="Content\images\aboutme\HH-53_crash.jpg" />
+    <Content Include="Content\images\aboutme\HomeImprovement_01.jpg" />
+    <Content Include="Content\images\aboutme\HomeImprovement_02.jpg" />
+    <Content Include="Content\images\aboutme\HomeImprovement_03.jpg" />
+    <Content Include="Content\images\aboutme\HomeImprovement_04.jpg" />
+    <Content Include="Content\images\aboutme\HomeImprovement_05.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_06.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_07.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_08.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_09.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_10.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_11.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_12.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_13.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_14.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_15.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_17.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_18.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_19.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_20.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_21.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_22.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_23.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_24.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_25.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_26.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_27.JPG" />
+    <Content Include="Content\images\aboutme\HomeImprovement_tools.jpg" />
+    <Content Include="Content\images\aboutme\hOME_01.jpg" />
+    <Content Include="Content\images\aboutme\IMG_0961.JPG" />
+    <Content Include="Content\images\aboutme\Military-T33CockpitRear.JPG" />
+    <Content Include="Content\images\aboutme\MilitaryAdmiral_Crowe_BA2C3159.jpg" />
+    <Content Include="Content\images\aboutme\Military_airforce.jpg" />
+    <Content Include="Content\images\aboutme\Military_airforcelogo.png" />
+    <Content Include="Content\images\aboutme\Military_airforcelogo_small.png" />
+    <Content Include="Content\images\aboutme\Military_BA2C3814.tif" />
+    <Content Include="Content\images\aboutme\Military_chevron-staffsergeant_300.jpg" />
+    <Content Include="Content\images\aboutme\Military_chevron_small.png" />
+    <Content Include="Content\images\aboutme\Military_habupatch.jpg" />
+    <Content Include="Content\images\aboutme\Military_habu_patch.jpg" />
+    <Content Include="Content\images\aboutme\Military_habu_patch.png" />
+    <Content Include="Content\images\aboutme\Military_HH-53_crash.jpg" />
+    <Content Include="Content\images\aboutme\Military_HH-53_patch.png" />
+    <Content Include="Content\images\aboutme\Military_JC-130H.jpg" />
+    <Content Include="Content\images\aboutme\Military_KC-135.JPG" />
+    <Content Include="Content\images\aboutme\Military_KC-135_02.JPG" />
+    <Content Include="Content\images\aboutme\Military_KC-135_03.JPG" />
+    <Content Include="Content\images\aboutme\Military_Kelley_Johnson.JPG" />
+    <Content Include="Content\images\aboutme\Military_patch-06 copy %282%29.png" />
+    <Content Include="Content\images\aboutme\Military_patch-06 copy.png" />
+    <Content Include="Content\images\aboutme\Military_patch-06.jpg" />
+    <Content Include="Content\images\aboutme\Military_Skunkworks_01.JPG" />
+    <Content Include="Content\images\aboutme\Military_Skunkworks_02.JPG" />
+    <Content Include="Content\images\aboutme\Military_sr-71_02.jpg" />
+    <Content Include="Content\images\aboutme\Military_sr-71_02_large.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR-71_Cockpit_wide.JPG" />
+    <Content Include="Content\images\aboutme\Military_SR71-Air-Military_Space1_600.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71-Air-Space1_300.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71-darth_vader.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71-Military_darth_vader2.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71_01.jpg" />
+    <Content Include="Content\images\aboutme\Military_sr71_01_large.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71_02.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71_03.jpg" />
+    <Content Include="Content\images\aboutme\Military_sr71_03_large.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71_03_larger.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71_04.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71_05.jpg" />
+    <Content Include="Content\images\aboutme\Military_SR71_06.jpg" />
+    <Content Include="Content\images\aboutme\Military_sr71_cockpit.jpg" />
+    <Content Include="Content\images\aboutme\Military_sr71_cockpit_300.jpg" />
+    <Content Include="Content\images\aboutme\Military_T-33.jpg" />
+    <Content Include="Content\images\aboutme\Military_T-38.JPG" />
+    <Content Include="Content\images\aboutme\Military_T-38_01.JPG" />
+    <Content Include="Content\images\aboutme\Military_T-38_02.JPG" />
+    <Content Include="Content\images\aboutme\Military_U-2.jpg" />
+    <Content Include="Content\images\aboutme\Military_U-2_02.jpg" />
+    <Content Include="Content\images\aboutme\Military_u2.jpg" />
+    <Content Include="Content\images\aboutme\Military_U2_01.JPG" />
+    <Content Include="Content\images\aboutme\Military_U2_02.JPG" />
+    <Content Include="Content\images\aboutme\Military_U2_300.jpg" />
+    <Content Include="Content\images\aboutme\Military_U2_600.jpg" />
+    <Content Include="Content\images\aboutme\Military_U2_Cockpit.JPG" />
+    <Content Include="Content\images\aboutme\Military_U2_Cockpit2.JPG" />
+    <Content Include="Content\images\aboutme\Military_U2_Cockpit3.JPG" />
+    <Content Include="Content\images\aboutme\RICHIE.JPG" />
+    <Content Include="Content\images\aboutme\SuezCanal.JPG" />
+    <Content Include="Content\images\aboutme\Surgery_01.jpg" />
+    <Content Include="Content\images\aboutme\Surgery_Azari-013.jpg" />
+    <Content Include="Content\images\aboutme\Surgery_DSCN2120.jpg" />
+    <Content Include="Content\images\aboutme\tree.jpg" />
+    <Content Include="Content\images\aboutme\tree2.jpg" />
+    <Content Include="Content\images\aboutme\Trees_01.JPG" />
+    <Content Include="Content\images\aboutme\Trees_02.JPG" />
+    <Content Include="Content\images\aboutme\Trees_03.JPG" />
+    <Content Include="Content\images\aboutme\Trees_04.JPG" />
+    <Content Include="Content\images\aboutme\tree_01.jpg" />
+    <Content Include="Content\images\aboutme\Tree_02.jpg" />
+    <Content Include="Content\images\aboutme\Tree_03.jpg" />
+    <Content Include="Content\images\aboutme\Tree_04.jpg" />
+    <Content Include="Content\images\aboutme\Tree_05.jpg" />
+    <Content Include="Content\images\aboutme\Tree_06.jpg" />
+    <Content Include="Content\images\aboutme\Tree_DSC_2193_edited.jpg" />
+    <Content Include="Content\images\aboutme\Tree_IMG_0961.JPG" />
+    <Content Include="Content\images\aboutme\Tree_RICHIE.JPG" />
+    <Content Include="Content\images\aboutme\_BA2C7754.jpg" />
+    <Content Include="Content\images\Adam_DSC_3493.jpg" />
+    <Content Include="Content\images\bx_loader.gif" />
+    <Content Include="Content\images\controls.png" />
+    <Content Include="Content\images\design\Anesthesiology.JPG" />
+    <Content Include="Content\images\design\ASCE-2.jpg" />
+    <Content Include="Content\images\design\ASCE2014.jpg" />
+    <Content Include="Content\images\design\Azari-013.jpg" />
+    <Content Include="Content\images\design\Azari-015.jpg" />
+    <Content Include="Content\images\design\Badylak_Header_2013.jpg" />
+    <Content Include="Content\images\design\Billiar_graph_03.JPG" />
+    <Content Include="Content\images\design\Billiar_graph_04.JPG" />
+    <Content Include="Content\images\design\CATER.JPG" />
+    <Content Include="Content\images\design\CEWO_2013.jpg" />
+    <Content Include="Content\images\design\DI_Screen_Shots_create_action.jpg" />
+    <Content Include="Content\images\design\ERMI.JPG" />
+    <Content Include="Content\images\design\Header_Design_Tool_MIRM_MMDPL_03.png" />
+    <Content Include="Content\images\design\Header_Design_Tool_MIRM_MMDPL_04.png" />
+    <Content Include="Content\images\design\Header_Design_Tool_MIRM_MMDPL_06.jpg" />
+    <Content Include="Content\images\design\IMG_0961.JPG" />
+    <Content Include="Content\images\design\masthead2000.jpg" />
+    <Content Include="Content\images\design\MIRM_MMDPL_2013.jpg" />
+    <Content Include="Content\images\design\MMDPL.JPG" />
+    <Content Include="Content\images\design\neurology_residency.JPG" />
+    <Content Include="Content\images\design\Neurology_Residency_2013.jpg" />
+    <Content Include="Content\images\design\okwhoa_jamesrm.jpg" />
+    <Content Include="Content\images\design\okwhoa_site.jpg" />
+    <Content Include="Content\images\design\PARC2010.JPG" />
+    <Content Include="Content\images\design\PARC2014.JPG" />
+    <Content Include="Content\images\design\PARC2018.JPG" />
+    <Content Include="Content\images\design\pareportcard.JPG" />
+    <Content Include="Content\images\design\pencils.jpg" />
+    <Content Include="Content\images\design\pencils.png" />
+    <Content Include="Content\images\design\pencils_1000.jpg" />
+    <Content Include="Content\images\design\poster_01_24x36.jpg" />
+    <Content Include="Content\images\design\poster_01_24x36_large.jpg" />
+    <Content Include="Content\images\design\poster_01_24x36_small.jpg" />
+    <Content Include="Content\images\design\poster_02_24x36.jpg" />
+    <Content Include="Content\images\design\poster_02_24x36_large.jpg" />
+    <Content Include="Content\images\design\poster_02_24x36_small.jpg" />
+    <Content Include="Content\images\design\radiology_redesign_2013.jpg" />
+    <Content Include="Content\images\design\SCC_Masthead_2013.jpg" />
+    <Content Include="Content\images\design\Surgery-Newsletter_BA2C3170.jpg" />
+    <Content Include="Content\images\design\Surgery-Newsletter_small_BA2C3170.jpg" />
+    <Content Include="Content\images\design\TLV_Cover_Final.jpg" />
+    <Content Include="Content\images\design\Transplant-Header_2013.jpg" />
+    <Content Include="Content\images\design\UPMC_Poster.jpg" />
+    <Content Include="Content\images\design\UPMC_Poster_small.jpg" />
+    <Content Include="Content\images\design\xu_lab.JPG" />
+    <Content Include="Content\images\experience\5th_Reconnaissance_Squadron_-_U-2_Osan.jpg" />
+    <Content Include="Content\images\experience\A2Z_card1.jpg" />
+    <Content Include="Content\images\experience\airforce.jpg" />
+    <Content Include="Content\images\experience\airforcelogo.png" />
+    <Content Include="Content\images\experience\airforcelogo_small.png" />
+    <Content Include="Content\images\experience\alcoa_bldg.jpg" />
+    <Content Include="Content\images\experience\alcoa_bldg_small.jpg" />
+    <Content Include="Content\images\experience\Alcoa_logo.png" />
+    <Content Include="Content\images\experience\Alcoa_logo_blue.png" />
+    <Content Include="Content\images\experience\Alcoa_project.jpg" />
+    <Content Include="Content\images\experience\ASCE-2linesig_vert.jpg" />
+    <Content Include="Content\images\experience\ASCE-2linesig_vert.png" />
+    <Content Include="Content\images\experience\ASCE-2linesig_vert_small.jpg" />
+    <Content Include="Content\images\experience\ASCE-pgh_300.jpg" />
+    <Content Include="Content\images\experience\ASCE-pgh_600.jpg" />
+    <Content Include="Content\images\experience\ASCE_brochure_page_1.jpg" />
+    <Content Include="Content\images\experience\ASCE_brochure_page_1_small.jpg" />
+    <Content Include="Content\images\experience\ASCE_brochure_page_2.jpg" />
+    <Content Include="Content\images\experience\ASCE_brochure_page_2_small.jpg" />
+    <Content Include="Content\images\experience\ASCE_final_6-5-14_PPT.jpg" />
+    <Content Include="Content\images\experience\ASCE_final_6-5-14_PPT_small.jpg" />
+    <Content Include="Content\images\experience\ASCE_PPG.jpg" />
+    <Content Include="Content\images\experience\ASCE_presentation_300.jpg" />
+    <Content Include="Content\images\experience\ASCE_Report_Card.jpg" />
+    <Content Include="Content\images\experience\ASCE_Report_Card_small.jpg" />
+    <Content Include="Content\images\experience\BHP_Kitty.jpg" />
+    <Content Include="Content\images\experience\BHP_Kitty_300.jpg" />
+    <Content Include="Content\images\experience\BHP_Puppy.jpg" />
+    <Content Include="Content\images\experience\BHP_puppy_300.jpg" />
+    <Content Include="Content\images\experience\Big_Heart_Pet_Logo_200.png" />
+    <Content Include="Content\images\experience\Big_Heart_Pet_Logo_large.png" />
+    <Content Include="Content\images\experience\cathedral_DSC_2843.jpg" />
+    <Content Include="Content\images\experience\cathedral_small_DSC_2843.jpg" />
+    <Content Include="Content\images\experience\chevron-staffsergeant_300.jpg" />
+    <Content Include="Content\images\experience\chevron_small.png" />
+    <Content Include="Content\images\experience\churchill.jpg" />
+    <Content Include="Content\images\experience\Database-Marketing-header-21.jpg" />
+    <Content Include="Content\images\experience\data_analyzed_300.png" />
+    <Content Include="Content\images\experience\data_analyzed_small.png" />
+    <Content Include="Content\images\experience\fairbanks-aurora-by-Kabacchi.jpg" />
+    <Content Include="Content\images\experience\fairbanksimages.jpg" />
+    <Content Include="Content\images\experience\habupatch.jpg" />
+    <Content Include="Content\images\experience\habu_patch.jpg" />
+    <Content Include="Content\images\experience\habu_patch.png" />
+    <Content Include="Content\images\experience\HH-53_patch.png" />
+    <Content Include="Content\images\experience\Keystone_Login.JPG" />
+    <Content Include="Content\images\experience\keystone_logo.png" />
+    <Content Include="Content\images\experience\keystone_logo_grey.png" />
+    <Content Include="Content\images\experience\keystone_logo_icon.png" />
+    <Content Include="Content\images\experience\monte-carlo.jpg" />
+    <Content Include="Content\images\experience\patch-06 copy.png" />
+    <Content Include="Content\images\experience\patch-06.jpg" />
+    <Content Include="Content\images\experience\pillars_tape_big.jpg" />
+    <Content Include="Content\images\experience\PittSeal_detailed.jpg" />
+    <Content Include="Content\images\experience\PittSeal_detailed.png" />
+    <Content Include="Content\images\experience\pixel-grid.png" />
+    <Content Include="Content\images\experience\POMUGM16_logo.jpg" />
+    <Content Include="Content\images\experience\portraits\large\001.jpg" />
+    <Content Include="Content\images\experience\portraits\large\002.jpg" />
+    <Content Include="Content\images\experience\portraits\large\003.jpg" />
+    <Content Include="Content\images\experience\portraits\large\004.jpg" />
+    <Content Include="Content\images\experience\portraits\large\005.jpg" />
+    <Content Include="Content\images\experience\portraits\large\006.jpg" />
+    <Content Include="Content\images\experience\portraits\large\007.jpg" />
+    <Content Include="Content\images\experience\portraits\large\008.jpg" />
+    <Content Include="Content\images\experience\portraits\large\009.jpg" />
+    <Content Include="Content\images\experience\portraits\large\00b.jpg" />
+    <Content Include="Content\images\experience\portraits\large\00c.jpg" />
+    <Content Include="Content\images\experience\portraits\large\00d.jpg" />
+    <Content Include="Content\images\experience\portraits\large\00e.jpg" />
+    <Content Include="Content\images\experience\portraits\large\00f.jpg" />
+    <Content Include="Content\images\experience\portraits\large\00u.jpg" />
+    <Content Include="Content\images\experience\portraits\large\00v.jpg" />
+    <Content Include="Content\images\experience\portraits\large\00w.jpg" />
+    <Content Include="Content\images\experience\portraits\large\00x.jpg" />
+    <Content Include="Content\images\experience\portraits\large\010.jpg" />
+    <Content Include="Content\images\experience\portraits\large\011.jpg" />
+    <Content Include="Content\images\experience\portraits\large\012.jpg" />
+    <Content Include="Content\images\experience\portraits\large\013.jpg" />
+    <Content Include="Content\images\experience\portraits\large\014.jpg" />
+    <Content Include="Content\images\experience\portraits\large\015.jpg" />
+    <Content Include="Content\images\experience\portraits\large\016.jpg" />
+    <Content Include="Content\images\experience\portraits\large\017.jpg" />
+    <Content Include="Content\images\experience\portraits\large\018.jpg" />
+    <Content Include="Content\images\experience\portraits\large\019.jpg" />
+    <Content Include="Content\images\experience\portraits\large\020.jpg" />
+    <Content Include="Content\images\experience\portraits\large\021.jpg" />
+    <Content Include="Content\images\experience\portraits\large\022.jpg" />
+    <Content Include="Content\images\experience\portraits\large\023.jpg" />
+    <Content Include="Content\images\experience\portraits\large\024.jpg" />
+    <Content Include="Content\images\experience\portraits\large\025.jpg" />
+    <Content Include="Content\images\experience\portraits\large\026.jpg" />
+    <Content Include="Content\images\experience\portraits\large\flowers.jpg" />
+    <Content Include="Content\images\experience\portraits\large\gloves.jpg" />
+    <Content Include="Content\images\experience\portraits\large\incline.jpg" />
+    <Content Include="Content\images\experience\portraits\large\northeast.jpg" />
+    <Content Include="Content\images\experience\portraits\large\point.jpg" />
+    <Content Include="Content\images\experience\portraits\large\sunset_pgh.jpg" />
+    <Content Include="Content\images\experience\portraits\large\sunset_pgh2.jpg" />
+    <Content Include="Content\images\experience\portraits\small\001.jpg" />
+    <Content Include="Content\images\experience\portraits\small\002.jpg" />
+    <Content Include="Content\images\experience\portraits\small\003.jpg" />
+    <Content Include="Content\images\experience\portraits\small\004.jpg" />
+    <Content Include="Content\images\experience\portraits\small\005.jpg" />
+    <Content Include="Content\images\experience\portraits\small\006.jpg" />
+    <Content Include="Content\images\experience\portraits\small\007.jpg" />
+    <Content Include="Content\images\experience\portraits\small\008.jpg" />
+    <Content Include="Content\images\experience\portraits\small\009.jpg" />
+    <Content Include="Content\images\experience\portraits\small\00b.jpg" />
+    <Content Include="Content\images\experience\portraits\small\00c.jpg" />
+    <Content Include="Content\images\experience\portraits\small\00d.jpg" />
+    <Content Include="Content\images\experience\portraits\small\00e.jpg" />
+    <Content Include="Content\images\experience\portraits\small\00f.jpg" />
+    <Content Include="Content\images\experience\portraits\small\00u.jpg" />
+    <Content Include="Content\images\experience\portraits\small\00v.jpg" />
+    <Content Include="Content\images\experience\portraits\small\00w.jpg" />
+    <Content Include="Content\images\experience\portraits\small\00x.jpg" />
+    <Content Include="Content\images\experience\portraits\small\010.jpg" />
+    <Content Include="Content\images\experience\portraits\small\011.jpg" />
+    <Content Include="Content\images\experience\portraits\small\012.jpg" />
+    <Content Include="Content\images\experience\portraits\small\013.jpg" />
+    <Content Include="Content\images\experience\portraits\small\014.jpg" />
+    <Content Include="Content\images\experience\portraits\small\015.jpg" />
+    <Content Include="Content\images\experience\portraits\small\016.jpg" />
+    <Content Include="Content\images\experience\portraits\small\017.jpg" />
+    <Content Include="Content\images\experience\portraits\small\018.jpg" />
+    <Content Include="Content\images\experience\portraits\small\019.jpg" />
+    <Content Include="Content\images\experience\portraits\small\020.jpg" />
+    <Content Include="Content\images\experience\portraits\small\021.jpg" />
+    <Content Include="Content\images\experience\portraits\small\022.jpg" />
+    <Content Include="Content\images\experience\portraits\small\023.jpg" />
+    <Content Include="Content\images\experience\portraits\small\024.jpg" />
+    <Content Include="Content\images\experience\portraits\small\025.jpg" />
+    <Content Include="Content\images\experience\portraits\small\026.jpg" />
+    <Content Include="Content\images\experience\portraits\small\flowers.jpg" />
+    <Content Include="Content\images\experience\portraits\small\gloves.jpg" />
+    <Content Include="Content\images\experience\portraits\small\incline.jpg" />
+    <Content Include="Content\images\experience\portraits\small\northeast.jpg" />
+    <Content Include="Content\images\experience\portraits\small\point.jpg" />
+    <Content Include="Content\images\experience\portraits\small\sunset_pgh.jpg" />
+    <Content Include="Content\images\experience\portraits\small\sunset_pgh2.jpg" />
+    <Content Include="Content\images\experience\poster_01_24x36.jpg" />
+    <Content Include="Content\images\experience\poster_01_24x36_large.jpg" />
+    <Content Include="Content\images\experience\poster_01_24x36_small.jpg" />
+    <Content Include="Content\images\experience\poster_02_24x36.jpg" />
+    <Content Include="Content\images\experience\poster_02_24x36_large.jpg" />
+    <Content Include="Content\images\experience\poster_02_24x36_small.jpg" />
+    <Content Include="Content\images\experience\Presbyterian_DSC_3070.jpg" />
+    <Content Include="Content\images\experience\rhea logo_color_2011_engineers text.png" />
+    <Content Include="Content\images\experience\RR1.JPG" />
+    <Content Include="Content\images\experience\RR1.png" />
+    <Content Include="Content\images\experience\RR2.JPG" />
+    <Content Include="Content\images\experience\RR3.JPG" />
+    <Content Include="Content\images\experience\RR4.JPG" />
+    <Content Include="Content\images\experience\RR5.JPG" />
+    <Content Include="Content\images\experience\RR6.JPG" />
+    <Content Include="Content\images\experience\RR7.JPG" />
+    <Content Include="Content\images\experience\sr-71_02.jpg" />
+    <Content Include="Content\images\experience\sr-71_02_large.jpg" />
+    <Content Include="Content\images\experience\SR71-Air-Space1_300.jpg" />
+    <Content Include="Content\images\experience\SR71-Air-Space1_600.jpg" />
+    <Content Include="Content\images\experience\SR71-Air-Space_300.jpg" />
+    <Content Include="Content\images\experience\SR71-Air-Space_600.jpg" />
+    <Content Include="Content\images\experience\SR71-darth_vader.jpg" />
+    <Content Include="Content\images\experience\SR71-darth_vader2.jpg" />
+    <Content Include="Content\images\experience\sr71_01.jpg" />
+    <Content Include="Content\images\experience\sr71_01_large.jpg" />
+    <Content Include="Content\images\experience\sr71_03.jpg" />
+    <Content Include="Content\images\experience\sr71_03_large.jpg" />
+    <Content Include="Content\images\experience\sr71_cockpit.jpg" />
+    <Content Include="Content\images\experience\sr71_cockpit_300.jpg" />
+    <Content Include="Content\images\experience\surgery_ANES.jpg" />
+    <Content Include="Content\images\experience\surgery_ANES_small.jpg" />
+    <Content Include="Content\images\experience\surgery_bartlett.jpg" />
+    <Content Include="Content\images\experience\surgery_bartlett_small.jpg" />
+    <Content Include="Content\images\experience\surgery_lee.jpg" />
+    <Content Include="Content\images\experience\surgery_lee_small.jpg" />
+    <Content Include="Content\images\experience\u2.jpg" />
+    <Content Include="Content\images\experience\U2_300.jpg" />
+    <Content Include="Content\images\experience\U2_600.jpg" />
+    <Content Include="Content\images\experience\Unison.jpg" />
+    <Content Include="Content\images\experience\Unison.png" />
+    <Content Include="Content\images\experience\UPMC-Anesthesiology.jpg" />
+    <Content Include="Content\images\experience\UPMC-ERMI.jpg" />
+    <Content Include="Content\images\experience\UPMC-MIRM.jpg" />
+    <Content Include="Content\images\experience\UPMC-MIRM_150.jpg" />
+    <Content Include="Content\images\experience\UPMC-RMNET.jpg" />
+    <Content Include="Content\images\experience\UPMC-RMNET_150.jpg" />
+    <Content Include="Content\images\experience\UPMC_DSC_3071.jpg" />
+    <Content Include="Content\images\experience\UPMC_Logo.jpg" />
+    <Content Include="Content\images\experience\UPMC_Logo_Life_Changing_Medicine_Plus_Mobius_transparent.png" />
+    <Content Include="Content\images\experience\UPMC_small_DSC_3071.jpg" />
+    <Content Include="Content\images\experience\USX_Tower_IMG_4284.jpg" />
+    <Content Include="Content\images\experience\US_Air_Force_U-2_%282139646280%29.jpg" />
+    <Content Include="Content\images\experience\ZocDoc.jpg" />
+    <Content Include="Content\images\experience\zocDoc_20.jpg" />
+    <Content Include="Content\images\experience\zocdoc_middleton_01.jpg" />
+    <Content Include="Content\images\experience\zocdoc_polina_01.jpg" />
+    <Content Include="Content\images\experience\zocdoc_polina_02.jpg" />
+    <Content Include="Content\images\experience\zocdoc_runco_01.jpg" />
+    <Content Include="Content\images\ico\efile_icon_32.png" />
+    <Content Include="Content\images\ico\OK_Whoa_Icon_128.png" />
+    <Content Include="Content\images\ico\OK_Whoa_Icon_16.png" />
+    <Content Include="Content\images\ico\OK_Whoa_Icon_32.png" />
+    <Content Include="Content\images\ico\OK_Whoa_Icon_64.png" />
+    <Content Include="Content\images\layout\analysis_01.jpg" />
+    <Content Include="Content\images\layout\analysis_02.jpg" />
+    <Content Include="Content\images\layout\analysis_03.jpg" />
+    <Content Include="Content\images\layout\analysis_04.jpg" />
+    <Content Include="Content\images\layout\analysis_05.jpg" />
+    <Content Include="Content\images\layout\analysis_06.jpg" />
+    <Content Include="Content\images\layout\analysis_07.jpg" />
+    <Content Include="Content\images\layout\analysis_08.jpg" />
+    <Content Include="Content\images\layout\analysis_09.jpg" />
+    <Content Include="Content\images\layout\analysis_10.jpg" />
+    <Content Include="Content\images\layout\analysis_11.jpg" />
+    <Content Include="Content\images\layout\BA2C3405_knockout_1301.png" />
+    <Content Include="Content\images\layout\BA2C3405_knockout_300.png" />
+    <Content Include="Content\images\layout\BA2C3405_knockout_600.png" />
+    <Content Include="Content\images\layout\BA2C3405_knockout_small.png" />
+    <Content Include="Content\images\layout\design_01.jpg" />
+    <Content Include="Content\images\layout\design_02.jpg" />
+    <Content Include="Content\images\layout\design_03.jpg" />
+    <Content Include="Content\images\layout\design_04.jpg" />
+    <Content Include="Content\images\layout\design_05.jpg" />
+    <Content Include="Content\images\layout\design_06.jpg" />
+    <Content Include="Content\images\layout\design_07.jpg" />
+    <Content Include="Content\images\layout\design_08.jpg" />
+    <Content Include="Content\images\layout\design_09.jpg" />
+    <Content Include="Content\images\layout\design_10.jpg" />
+    <Content Include="Content\images\layout\design_11.jpg" />
+    <Content Include="Content\images\layout\design_12.jpg" />
+    <Content Include="Content\images\layout\design_13.jpg" />
+    <Content Include="Content\images\layout\design_14.jpg" />
+    <Content Include="Content\images\layout\development_gearz.jpg" />
+    <Content Include="Content\images\layout\home_01.jpg" />
+    <Content Include="Content\images\layout\home_02.jpg" />
+    <Content Include="Content\images\layout\home_03.jpg" />
+    <Content Include="Content\images\layout\home_04.jpg" />
+    <Content Include="Content\images\layout\home_05.jpg" />
+    <Content Include="Content\images\layout\home_06.jpg" />
+    <Content Include="Content\images\layout\home_07.jpg" />
+    <Content Include="Content\images\layout\home_08.jpg" />
+    <Content Include="Content\images\layout\home_09.jpg" />
+    <Content Include="Content\images\layout\media-01.jpg" />
+    <Content Include="Content\images\layout\media_01.jpg" />
+    <Content Include="Content\images\layout\media_02.jpg" />
+    <Content Include="Content\images\layout\media_03.jpg" />
+    <Content Include="Content\images\layout\media_04.jpg" />
+    <Content Include="Content\images\layout\media_05.jpg" />
+    <Content Include="Content\images\layout\media_06.jpg" />
+    <Content Include="Content\images\layout\media_07.jpg" />
+    <Content Include="Content\images\layout\media_08.jpg" />
+    <Content Include="Content\images\layout\media_09.jpg" />
+    <Content Include="Content\images\layout\media_10.jpg" />
+    <Content Include="Content\images\layout\pixels.jpg" />
+    <Content Include="Content\images\layout\Splashpage_text_01.jpg" />
+    <Content Include="Content\images\layout\Splashpage_text_02.jpg" />
+    <Content Include="Content\images\layout\Splashpage_text_03.jpg" />
+    <Content Include="Content\images\layout\Splashpage_text_04.jpg" />
+    <Content Include="Content\images\layout\Splashpage_text_05.jpg" />
+    <Content Include="Content\images\layout\Splashpage_text_06.jpg" />
+    <Content Include="Content\images\layout\Splashpage_text_07.jpg" />
+    <Content Include="Content\images\layout\Splashpage_text_08.jpg" />
+    <Content Include="Content\images\layout\Splashpage_text_09.jpg" />
+    <Content Include="Content\images\layout\user_experience_01.jpg" />
+    <Content Include="Content\images\layout\user_experience_02.jpg" />
+    <Content Include="Content\images\layout\user_experience_03.jpg" />
+    <Content Include="Content\images\layout\web_development_01.jpg" />
+    <Content Include="Content\images\layout\web_development_02.jpg" />
+    <Content Include="Content\images\layout\web_development_03.jpg" />
+    <Content Include="Content\images\layout\web_development_04.jpg" />
+    <Content Include="Content\images\layout\web_development_05.jpg" />
+    <Content Include="Content\images\layout\web_development_06.jpg" />
+    <Content Include="Content\images\layout\web_development_07.jpg" />
+    <Content Include="Content\images\layout\web_development_08.jpg" />
+    <Content Include="Content\images\layout\web_development_09.jpg" />
+    <Content Include="Content\images\OK_Whoa_Icon_32.png" />
+    <Content Include="Content\images\pagebanners\BA2C1530_cropped.jpg" />
+    <Content Include="Content\images\pagebanners\Banner_BA2C7619.jpg" />
+    <Content Include="Content\images\pagebanners\Banner_BA2C7644.jpg" />
+    <Content Include="Content\images\pagebanners\Banner_BA2C7761.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_01.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_02.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_02_3000X200.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_03.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_04_1000X76.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_04_3000X200.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_05_1000X76.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_05_3000X200.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_06_1000X760.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_06_3000X200.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_09_1000X67.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_09_3000X200.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_10_1000X67.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_10_3000X200.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_11_1000X67.jpg" />
+    <Content Include="Content\images\pagebanners\Fresh_horiz_12_3000X200.jpg" />
+    <Content Include="Content\images\pagebanners\West_End_Overlook_Panorama1.jpg" />
+    <Content Include="Content\images\pagebanners\_BA2C6315.jpg" />
+    <Content Include="Content\images\pagebanners\_BA2C7754.jpg" />
+    <Content Include="Content\images\pagebanners\_schenley_Panorama1.jpg" />
+    <Content Include="Content\images\portfolio\large\image_goodfellas.jpg" />
+    <Content Include="Content\images\portfolio\large\image_Tucco_Portfolio_1.jpg" />
+    <Content Include="Content\images\portfolio\large\image_za.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zb.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zc.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zd.jpg" />
+    <Content Include="Content\images\portfolio\large\image_ze.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zf.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zg.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zh.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zi.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zj.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zk.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zl.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zm.jpg" />
+    <Content Include="Content\images\portfolio\large\image_zn.jpg" />
+    <Content Include="Content\images\portfolio\large\image__a.jpg" />
+    <Content Include="Content\images\portfolio\large\image__aa.jpg" />
+    <Content Include="Content\images\portfolio\large\image__b.jpg" />
+    <Content Include="Content\images\portfolio\large\image__bb.jpg" />
+    <Content Include="Content\images\portfolio\large\image__c.jpg" />
+    <Content Include="Content\images\portfolio\large\image__cc.jpg" />
+    <Content Include="Content\images\portfolio\large\image__d.jpg" />
+    <Content Include="Content\images\portfolio\large\image__dd.jpg" />
+    <Content Include="Content\images\portfolio\large\image__e.jpg" />
+    <Content Include="Content\images\portfolio\large\image__ee.jpg" />
+    <Content Include="Content\images\portfolio\large\image__f.jpg" />
+    <Content Include="Content\images\portfolio\large\image__ff.jpg" />
+    <Content Include="Content\images\portfolio\large\image__g.jpg" />
+    <Content Include="Content\images\portfolio\large\image__gg.jpg" />
+    <Content Include="Content\images\portfolio\large\image__h.jpg" />
+    <Content Include="Content\images\portfolio\large\image__hh.jpg" />
+    <Content Include="Content\images\portfolio\large\image__i.jpg" />
+    <Content Include="Content\images\portfolio\large\image__j.jpg" />
+    <Content Include="Content\images\portfolio\large\image__k.jpg" />
+    <Content Include="Content\images\portfolio\large\image__l.jpg" />
+    <Content Include="Content\images\portfolio\large\image__m.jpg" />
+    <Content Include="Content\images\portfolio\large\image__r.jpg" />
+    <Content Include="Content\images\portfolio\large\image__s.jpg" />
+    <Content Include="Content\images\portfolio\large\image__t.jpg" />
+    <Content Include="Content\images\portfolio\large\image__u.jpg" />
+    <Content Include="Content\images\portfolio\large\image__v.jpg" />
+    <Content Include="Content\images\portfolio\large\image__w.jpg" />
+    <Content Include="Content\images\portfolio\large\image__x.jpg" />
+    <Content Include="Content\images\portfolio\large\image__y.jpg" />
+    <Content Include="Content\images\portfolio\large\image__z.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_goodfellas.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_Tucco_Portfolio_1.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_za.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zb.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zc.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zd.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_ze.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zf.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zg.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zh.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zi.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zj.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zk.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zl.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zm.jpg" />
+    <Content Include="Content\images\portfolio\medium\image_zn.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__a.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__aa.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__b.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__bb.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__c.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__cc.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__d.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__dd.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__e.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__ee.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__f.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__ff.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__g.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__gg.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__h.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__hh.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__i.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__j.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__k.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__l.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__m.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__r.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__s.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__t.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__u.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__v.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__w.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__x.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__y.jpg" />
+    <Content Include="Content\images\portfolio\medium\image__z.jpg" />
+    <Content Include="Content\images\portfolio\small\image_goodfellas.jpg" />
+    <Content Include="Content\images\portfolio\small\image_Tucco_Portfolio_1.jpg" />
+    <Content Include="Content\images\portfolio\small\image_za.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zb.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zc.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zd.jpg" />
+    <Content Include="Content\images\portfolio\small\image_ze.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zf.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zg.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zh.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zi.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zj.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zm.jpg" />
+    <Content Include="Content\images\portfolio\small\image_zn.jpg" />
+    <Content Include="Content\images\portfolio\small\image__a.jpg" />
+    <Content Include="Content\images\portfolio\small\image__aa.jpg" />
+    <Content Include="Content\images\portfolio\small\image__b.jpg" />
+    <Content Include="Content\images\portfolio\small\image__bb.jpg" />
+    <Content Include="Content\images\portfolio\small\image__c.jpg" />
+    <Content Include="Content\images\portfolio\small\image__cc.jpg" />
+    <Content Include="Content\images\portfolio\small\image__d.jpg" />
+    <Content Include="Content\images\portfolio\small\image__dd.jpg" />
+    <Content Include="Content\images\portfolio\small\image__e.jpg" />
+    <Content Include="Content\images\portfolio\small\image__ee.jpg" />
+    <Content Include="Content\images\portfolio\small\image__f.jpg" />
+    <Content Include="Content\images\portfolio\small\image__ff.jpg" />
+    <Content Include="Content\images\portfolio\small\image__g.jpg" />
+    <Content Include="Content\images\portfolio\small\image__gg.jpg" />
+    <Content Include="Content\images\portfolio\small\image__h.jpg" />
+    <Content Include="Content\images\portfolio\small\image__hh.jpg" />
+    <Content Include="Content\images\portfolio\small\image__i.jpg" />
+    <Content Include="Content\images\portfolio\small\image__j.jpg" />
+    <Content Include="Content\images\portfolio\small\image__k.jpg" />
+    <Content Include="Content\images\portfolio\small\image__l.jpg" />
+    <Content Include="Content\images\portfolio\small\image__m.jpg" />
+    <Content Include="Content\images\portfolio\small\image__r.jpg" />
+    <Content Include="Content\images\portfolio\small\image__s.jpg" />
+    <Content Include="Content\images\portfolio\small\image__t.jpg" />
+    <Content Include="Content\images\portfolio\small\image__u.jpg" />
+    <Content Include="Content\images\portfolio\small\image__v.jpg" />
+    <Content Include="Content\images\portfolio\small\image__w.jpg" />
+    <Content Include="Content\images\portfolio\small\image__x.jpg" />
+    <Content Include="Content\images\portfolio\small\image__y.jpg" />
+    <Content Include="Content\images\portfolio\small\image__z.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_goodfellas.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_Tucco_Portfolio_1.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_za.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zb.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zc.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zd.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_ze.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zf.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zg.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zh.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zi.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zj.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zk.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zm.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image_zn.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__a.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__aa.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__b.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__bb.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__c.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__cc.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__d.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__dd.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__e.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__ee.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__f.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__ff.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__g.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__gg.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__h.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__hh.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__i.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__j.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__k.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__l.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__m.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__r.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__s.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__t.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__u.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__v.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__w.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__x.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__y.jpg" />
+    <Content Include="Content\images\portfolio\tiny\image__z.jpg" />
+    <Content Include="Content\images\_BA2C7754.jpg" />
+    <Content Include="design\design1.html" />
+    <Content Include="design\design2.asp" />
+    <Content Include="design\design2.html" />
+    <Content Include="design\design_active.html" />
+    <Content Include="design\design_banners.html" />
+    <Content Include="design\design_print.html" />
+    <Content Include="design\design_websites.html" />
+    <Content Include="design\outer_menu.html" />
+    <Content Include="experience\AATestPage.html" />
+    <Content Include="experience\experience_Alcoa.html" />
+    <Content Include="experience\experience_ASCE.html" />
+    <Content Include="experience\experience_BHP.html" />
+    <Content Include="experience\experience_HTA.html" />
+    <Content Include="experience\experience_Interior.html" />
+    <Content Include="experience\experience_Keystone.html" />
+    <Content Include="experience\experience_Pitt.html" />
+    <Content Include="experience\experience_RollsRoyce.html" />
+    <Content Include="experience\experience_Unison.html" />
+    <Content Include="experience\experience_UPMC.html" />
+    <Content Include="experience\experience_USAF.html" />
+    <Content Include="experience\experience_ZocDoc.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\images\design\TLV_Menu_6-page_Final-printed2.pdf" />
+    <Content Include="experience\experience_USAF.asp.exclude" />
+    <Content Include="experience\experience_ZocDoc.asp.exclude" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Slideshow.js" />
+    <Content Include="Scripts\slidesloader.js" />
+    <Content Include="UserControls\ucAboutMe.ascx" />
+    <Content Include="UserControls\ucAboutMe.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="UserControls\ucDesignBanner.ascx" />
+    <Content Include="UserControls\ucDesignBanner.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="UserControls\ucMainMenu.ascx" />
+    <Content Include="UserControls\ucMainMenu.ascx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="UserControls\ucMenuDesign.ascx" />
+    <Content Include="UserControls\ucMenuDesign.ascx.vb" />
+    <Content Include="UserControls\ucMenuExperience.ascx" />
+    <Content Include="UserControls\ucMenuExperience.ascx.vb" />
+    <Content Include="Views\Shared\_AboutMe.cshtml" />
+    <Content Include="Views\Shared\_ExperienceAlcoa.cshtml" />
+    <Content Include="Views\Shared\_ExperienceASCE.cshtml" />
+    <Content Include="Views\Shared\_ExperienceHTA.cshtml" />
+    <Content Include="Views\Shared\_ExperienceInterior.cshtml" />
+    <Content Include="Views\Shared\_ExperienceKeystone.cshtml" />
+    <Content Include="Views\Shared\_ExperiencePitt.cshtml" />
+    <Content Include="Views\Shared\_ExperienceRollsRoyce.cshtml" />
+    <Content Include="Views\Shared\_ExperienceUnison.cshtml" />
+    <Content Include="Views\Shared\_ExperienceUPMC.cshtml" />
+    <Content Include="Views\Shared\_HomeImprovement.cshtml" />
+    <Content Include="Views\Shared\_MilitaryService.cshtml" />
+    <Content Include="Views\Shared\_Music.cshtml" />
+    <Content Include="Views\Shared\_Video.cshtml" />
+    <Content Include="Views\Shared\_Yoink.cshtml" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Experience.cshtml" />
+    <Content Include="Views\Shared\_Design.cshtml" />
+    <Content Include="Views\Shared\_MyBackyard.cshtml" />
+    <Content Include="Views\Shared\_Trees.cshtml" />
+    <Content Include="Views\Shared\_ExperienceBHP.cshtml" />
+    <Content Include="Views\Shared\_ExperienceUSAF.cshtml" />
+    <Content Include="Views\Shared\_Photography.cshtml" />
+    <Content Include="Views\Shared\_DesignPrint.cshtml" />
+    <Content Include="Views\Shared\_DesignBanners.cshtml" />
+    <Content Include="Views\Shared\_DesignWebsites.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="aboutme\_notes\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\images\aboutme\_notes\" />
+    <Folder Include="Content\images\design\_notes\" />
+    <Folder Include="Content\images\experience\portraits\large\_notes\" />
+    <Folder Include="Content\images\experience\portraits\small\_notes\" />
+    <Folder Include="Content\images\experience\_notes\" />
+    <Folder Include="Content\images\ico\_notes\" />
+    <Folder Include="Content\images\layout\_notes\" />
+    <Folder Include="Content\images\pagebanners\_notes\" />
+    <Folder Include="Content\images\portfolio\large\_notes\" />
+    <Folder Include="Content\images\portfolio\medium\_notes\" />
+    <Folder Include="Content\images\portfolio\small\_notes\" />
+    <Folder Include="Content\images\portfolio\tiny\_notes\" />
+    <Folder Include="Content\images\source_files\" />
+    <Folder Include="Content\images\_notes\" />
+    <Folder Include="design\_notes\" />
+    <Folder Include="experience\_notes\" />
+    <Folder Include="photography\" />
+    <Folder Include="UserControls\_notes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OkWhoa.Data\OkWhoa.Data.csproj">
+      <Project>{28680f0b-2a55-4fa1-9cde-2a748986d783}</Project>
+      <Name>OkWhoa.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64917</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44346/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

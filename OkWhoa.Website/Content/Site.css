@@ -1,0 +1,775 @@
+﻿@charset "utf-8";
+
+
+/*Th stylesheet below is optimized for the smallest screns that might be encountered. 
+	In the media queries is where everything is set to look good on larger screens. 
+	So, if these styles seem weird, that's why.*/
+	 
+
+
+.colorgrid {
+width:100%;height:40px;float:left;color:black;}
+
+*,
+*:after,
+*::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;}
+/*	CLEARFIX: the following "clearfix" styles are to make containers of floated elements display properly.
+		visit the links if you would like to understand this bit of code
+    http://www.adamkaplan.me/grid/
+    http://fuseinteractive.ca/blog/understanding-humble-clearfix*/
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+
+html {
+	padding: 0px;
+	margin: 0 auto;
+}
+
+body {		
+	padding: 0;
+	margin: 0;
+	font-size: .56rem;
+	font-family: 'Poppins', sans-serif;/**/
+	
+	line-height:.5;/*setting line-height low fixes the gap under the banner image. Set it back to 1.2 on the sitecontainer*/
+	color: #5b3a1f; /*dark umber*/
+
+	background-color: #fcf9f7; 
+	/*background-color: transparent;FCF8F3 desaturated umber lightened*/
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	color: #316065;
+	line-height: 1.2;
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 0;
+	margin-bottom: 0.2em;
+	padding-right: 25px;
+	padding-left: 2px;
+	text-shadow: 2px 2px 1px hsla(0,0%,50%,.08);
+}
+
+h1 {font-size: .8rem;}
+h2 {font-size: .7rem;}
+h3 {font-size: .6rem;}
+h4 {font-size: .55rem;}
+h5 {font-size: .5rem;}
+h6 {font-size: .45rem;}
+
+.pageTitle {/*page title should span entire screen and maybe not depentent on fontsize */
+		font-size:.9rem;
+		margin:-33px 0px 21px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
+		background-color: transparent; 
+		color: #bbbbbb;/**/
+		width:100%;
+}
+
+
+a img {border:none;}/* ??? */
+
+ul {
+	margin-left: 3%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+li {
+	margin-left: 1.5%;
+	margin-bottom: 0.8em; /* why is this set this way? */
+	margin-bottom: 1em; /* why is this set this way? */
+}
+
+strong {
+	font-weight: bold;
+	color: #78653b;
+}
+
+p {
+	line-height: 1.5;
+	margin: 0 0 12px 0;
+	padding-right: 5px;
+	padding-left: 1%;
+}
+hr {margin:0 0 10px 0;}
+
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+
+a:link {
+		color: #5378D9;
+		color:red;
+		text-decoration: none;
+}
+
+a:visited {
+	color: #5378D9;/*this is the color that comes up as the default*/
+	text-decoration: none;
+}
+
+
+/* keyboard navigation  */
+a:hover, a:active, a:focus {/* this is the class that appears by default */
+	text-decoration: underline;
+	text-decoration: none;
+	color: #5378D9;	
+}
+
+/*   SPLASH PAGE SPECIFIC    */
+.splashcontainer {/*This style will replace .contentcontainer on splash. */ 
+
+}
+
+#sitecontainer {/*this surrounds everything except the banner.*/
+				position: relative;/*this is to provide positioning context to elements within the sitecontainer - mostly for log-in stuff */
+	width: 100%;
+	background-color:#f6f6f6;
+	box-shadow: 4px 8px 24px hsla(3,100%,100%,0);
+	line-height:.5; /* line height is set here because it had to be set low on body to fix the gap under the banner image. */	
+	border-top: 0;
+	border-right: 1px solid #eee0ce;
+	border-bottom: 1px solid #eee0ce;
+	border-left: 1px solid #eee0ce;
+	border-radius: 0 0 16px 16px;
+	margin: 0 auto;
+	/*padding-top:33px;*/
+	max-width: 1200px;
+}
+/*	*/
+
+#sitecontent { /*sitecontent is the div that wraps around the contentplaceholder. sitecontentSplash will be used on the splash page*/
+	padding: 16px .1% 0% .1%; /* this was set to "33px 2% 0% 1.5%;" before. */
+	margin:0px auto;/* why 1px? 
+	margin-top:0px;*/
+	float: left;
+	background-color:#fdfdfd;
+	width:84%;/*change the width in media queries to suit whatever navigation menus are displayed*/	
+	position: relative;	
+}
+#photography { /*sitecontentPhotography is for the Photography page. It's meant to override some of the #sitecontent settings. */
+	/*padding: 16px .1% 0% .1%;  this was set to "33px 2% 0% 1.5%;" before. */
+	/*margin: 0px auto;  why 1px? 
+	margin-top:0px;
+	float: left;
+	position: relative;*/
+	background-color: #222222;
+	width: 100%; /*allows photos to fill the whole viewport */
+	
+}
+.sitecontentSplash {
+	/* all the styles from #sitecontent overwrite any styles written here. */	
+	/*width:100%;  change the width in media queries to suit whatever navigation menus are displayed*/
+	
+	/*background-image: url(../images/layout/BA2C3405_knockout_small.png);
+	background-image: url(../images/layout/BA2C3405_knockout_300.png);
+	background-image: url(../images/layout/BA2C3405_knockout_600.png);*/
+		
+	background-image: url(../Content/images/layout/BA2C3405_knockout_1301.png);
+	background-repeat: no-repeat;
+	background-position: 130% 100%;
+	background-size: contain;
+	height:100%;
+	min-height: 400px;
+}
+
+
+
+
+
+
+#pageContent {
+	background-color: #fcfcfc;
+}
+
+.masterBanner {/* this is the class applied to IMGs in the header*/
+	width: 100%;
+	max-height:300px;
+}
+#header {	
+				 
+					 background-image:url("../images/pagebanners/Fresh_horiz_10_3000X200.jpg");/**/
+					 height:auto;
+					 background-size:contain;
+					 background-size:auto;
+					 background-repeat:no-repeat;
+					 border:1px red solid; 
+					 /*height:90px;
+					 height:auto;
+					 height:90%;
+					 background-color: yellow;  */
+}
+
+
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+.clearLeft {clear:left;
+}
+.clearRight {clear:right;
+}
+.experienceLogo {
+   float:left; 
+	 margin: 1% 4% 2% 1%;
+	 padding: 2% 4% 2% 2%;
+	 border-radius:2%;
+   width:15%;
+   
+	  box-shadow:3px 4px 5px hsla(3,10%,30%,8);/*heavy and dark*/
+		box-shadow:2px 2px 2px hsla(3,90%,30%,.1);
+		clear:left;/**/
+}
+.experienceLogoRight {
+	float: right;
+	clear:left;
+	width:15%;
+	margin: -2% 3% 2% 1%;
+	/*border:1px solid red;*/
+}
+
+.experienceFigure {
+	width: 33%;
+	/*clear:right;*/
+	margin:1% 3% 2% 2%;
+}
+/*.aboutMeFigure {
+	width: 50%;
+	clear:right;
+	margin:1% -27% 2% 2%;
+}*/
+
+.aboutMeFigureLeft {
+	width: 33%;
+	/*clear:right;*/
+	float:left;
+	clear:left;
+	margin: 0% 2% 2% -12%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
+}
+.aboutMeFigureRight {
+	width: 33%;
+	float:right;
+	clear:right;/**/
+	margin:1% -18% 2% 2%;/*the negative margin allows the photo to occupy dead space under the navsub menu*/
+}
+.aboutMeClusterLeft {
+	width: 33%;
+	/*clear:right;*/
+	float:left;
+	clear:left;
+	margin: 0% 2% 2% -16%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
+}
+
+.aboutMeClusterRight {
+	width: 36%;
+	float:right;
+	clear:right;/**/
+	margin:1% -18% 2% 2%;/*the negative margin allows the photo to occupy dead space under the navsub menu*/
+}
+
+/*.splashquotes {
+	position: absolute;
+	bottom: 76%;
+	left: 39%;
+	width: 35%;
+	min-width: 150px;
+	max-width: 200px;
+	height: 60px;
+}
+
+.splashquotes img {
+		width: 100%; 
+	}
+
+.splashimage { 
+	width: 100%;
+	min-width: 350px;
+	z-index: 100;
+	position: absolute;
+	bottom: 0px;
+}
+*/
+#slideshow {
+	height:180px; /* Set in main style sheet - overidden here ???? */
+	height: auto;
+	position: relative;
+}
+
+.phones {
+	display: none;
+}
+
+
+.aboutmecontent {
+ margin-top:90px;
+}
+
+#photocontent  {
+	padding: 0; 
+	width: 100%;
+	float: left;
+	background-color:transparent;
+}
+
+.references {
+background-color:#f4f4e4;
+height:100%;
+padding:1.5% ;
+float:left;
+margin-left:1%;
+border-radius:16px;
+margin-bottom:20px;
+width:47%;/**/
+width:31%;
+display:table-cell;
+}
+	.references p {
+/*font-size:0.8rem;*/
+line-height:1.6;
+	}
+.references img {
+border-radius:12px;
+float:left;
+margin:4%;
+width:42%;
+box-shadow:4px 8px 24px hsla(0,0%,0%,.15);
+}
+
+
+
+
+
+#DesignBanner {
+	width: 90%;
+	max-width: 1400px;
+	background-color: #FCF8F3;
+	margin: 0 auto;
+	position: relative;
+	height: 200px;
+	/*border: 3px dashed red; */
+}
+
+.clouds {
+	/*width: 180px;*/
+	/*height: 180px;	
+	height: 90%;*/
+	max-height:180px;
+	width: auto;
+	max-width: 180px;
+	background-color:transparent;
+	border-radius: 50%;
+	position: absolute;
+	overflow: hidden;
+	/*if opacity is not set to 1 the images flicker (flash of unstyled content)*/
+	opacity: 1;
+	/*box-shadow: 4px 8px 24px hsla(142,25%,50%,.2);*/
+}
+.clouds div.yoink {
+/*font-size:1.8em;
+font-size:2.5em;*/
+z-index:2000;
+width:100%;
+  color:#000;
+  line-height:1.1;
+  margin:  0 auto;
+  text-align: center; 
+  position:absolute;
+  top:115%;	
+}
+
+
+/* the following styles are for the slideshow script which fades images in and out */
+/* the following styles were cut from design pages and moved here. There could be some issues. */
+#slideshow {
+  position:relative;
+  height:180px;
+}
+#slideshow IMG {
+  position:absolute;
+  top:0;
+  /*left:0;*/
+  right:0;/* had to override left:0 to get splashpage text to work RJ*/
+  z-index:8;
+}
+#slideshow IMG.active {
+  z-index:10;
+}
+#slideshow IMG.last-active {
+  z-index:9;
+}
+/* end of slideshow styles */
+
+
+/* the following styles (cycler, animation) are for cross-fading stacks of images */
+/* these are primarily for the "clouds" on the design pages */
+.cycler {
+  position:relative;height:180px;width:180px;float:left;}
+/* the following provides a different width for animations within the content div */
+.cycler img {position:absolute;z-index:1;}
+.cycler img.active {z-index:3}
+.animation {
+  width: 96%;
+  margin: 15px 0px 10px 0px;
+  float:left;
+  background-color:transparent;
+}
+.animation a {
+  clear:right;
+  text-align:center;
+}
+.animation .cycler {
+  position:relative;  
+  width:100%;
+  float:left;
+}
+
+/* the following styles are preliminary tests of the animation features in modern browsers, See Missing Manual CSS3 page 354 */
+@keyframes animTest {
+  from {color:red;opacity:0.2;}
+  50% {background-color:transparent;}
+  
+  to {
+  background-color:green;
+  padding:0;
+  transform: scale(1.18);
+  color:#aaa;
+  font-size:1em;
+  border-radius:12px;
+  opacity:1;
+  }
+}
+.testAnimation {	
+  text-align:center;
+  opacity:0.2
+}
+.testAnimation:hover {
+  animation-name: animTest;
+  animation-duration: .5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  /*animation-iteration-count: 2;
+  animation-delay: .3s;*/ 
+	
+	 
+} 
+	/* -------------------------------------------------------------------------------------------------------------------*/
+	/* -------------------------------------------------------------------------------------------------------------------*/
+	/* -------------------------------------------------------------------------------------------------------------------*/
+	/* Navigation (for smallest screens)*/
+	/* -------------------------------------------------------------------------------------------------------------------*/
+.submenuTitle {
+	text-align: center;
+	margin-bottom:10px;
+}
+.hidden {
+	display:none;
+}
+.footer {
+		/*background-image:url(../images/layout/pixels.jpg);background-repeat:repeat-y;
+		padding-left:10%;*/
+		height:30px;
+		/*max-width:1200px;*/
+		margin:0 auto;
+		text-align:center;	
+		width:100%;
+		float:left;/* floating the fooer left keeps it fromfalling into the space where the submenu goes */
+		/*background-color:yellow;*/
+	}
+.footer a {
+		display: inline-block;
+		padding:.7% 1.2%;	
+		margin:.1% .5% 1% .5%;
+		font-size:.58rem;/**/
+	}
+
+
+/* NAVIGATION ------------------------------------------------------------------------------------------------- */
+
+#navmain, #navsub {
+		font-family: 'Lexend Giga', sans-serif;
+		font-weight:400;
+		display:block; /* On smallest devices the menu should be horizontal across the top. Larger screens vertical left column*/
+		background-color:transparent; 
+		border-radius: 2px;		
+
+	}
+#navmain {			
+		width:100%; /*this is needed here to make the main menu display across top of screen at small sizes */
+		padding:9px 0px;
+		float:left;
+	}
+#navsub {
+		width:14%;
+		padding:9px 0px;
+		float:right;		
+}
+#navmain a {
+		font-size:.55rem;
+		background-color:#fafafa; /**/
+		letter-spacing:-1px;/*this works. Great for small screen. Remember to turn this off in media query*/
+		line-height:1.2;/**/
+		padding:3px 3px;
+		margin:6px 0px;/* at small screen sizes the margin needs to be set in pixels*/
+}
+
+#navsub a { /*the settings here are for the smallest screens (320px wide)*/
+		font-size:.55rem;
+		background-color:#fafafa; /**/
+		letter-spacing:-1px;/*this works. Great for small screen*/
+		color:red; /*this needs a complete cache clearing to see the red text s*/
+		line-height:1.2;
+		display: block;/*this is needed to make the buttons stack vertically*/
+		padding:3px;/* for smallest screens this needs to be very low */
+		margin:6px 0px; /* for smallest screens these need to be very low */
+		text-align:center;	
+}
+
+#navmain a:link {/*  */
+		color: green;/**/
+		text-decoration: none;
+		border: 1px solid #666666;
+		border-radius:6px;/**/
+		border-top-color:#efefef;
+		border-right-color:#dedede;
+		border-bottom-color:#cccccc;
+		border-left-color:#dddddd;
+}
+#navmain a:visited {
+		color:orange;
+				color: #478ad6;/* this is a good color */
+		border: 1px solid #666666;
+		/*border-radius:6px;*/
+		border-top-color:#ffffff;
+		border-right-color:#dddddd;
+		border-bottom-color:#cccccc;
+		border-left-color:#eeeeee;
+
+}
+#navmain a:hover, a:active, a:focus {/* this is the class that appears by default */
+		/*color: #5378D9;*/
+		color:#6a99d1;
+		background-color:#e9e9e9;
+		border: 1px solid #666666;
+		border-radius:6px;/**/
+		border-top-color:#cecece;
+		border-right-color:#cccccc;
+		border-bottom-color:#dddddd;
+		border-left-color:#bebebe;
+}
+#navsub a:link {
+		color: red;
+		text-decoration: none;
+		border: 1px solid #666666;
+		border-radius: 6px;/**/
+		border-top-color: #ffffff;
+		border-right-color: #eeeeee;
+		border-bottom-color: #cccccc;
+		border-left-color: #dddddd;
+}
+#navsub a:visited {
+		color: #3969b8; /* this color came from Kuler */
+		border: 1px solid black;
+		border-radius:6px;/**/
+		border-top-color:#ffffff;
+		border-right-color:#dddddd;
+		border-bottom-color:#cccccc;
+		border-left-color:#eeeeee;
+				
+}
+#navsub a:hover, a:active, a:focus {
+
+		text-decoration: none;
+		color:#3a8bdb;/* this came from Kuler */
+		border: 1px solid #666666;
+		border-radius:6px;/**/
+		border-top-color:#cecece;
+		border-right-color:#cccccc;
+		border-bottom-color:#dddddd;
+		border-left-color:#bebebe;
+		background-color:#e9e9e9; /* test */
+}
+
+.tblAddUsers {
+	position: relative;
+	text-align: left;
+	background-color: #f1f2f3;
+	border: 1px solid #e1e2e3;
+	padding: 8px;
+	border-radius: 4px;
+}
+
+	.tblAddUsers thead {
+		height: 20px;
+	}
+
+	.tblAddUsers td {
+		height: 10px;
+		margin: 10px;
+	}
+
+.tblDisplayUsers {
+	position: relative;
+	text-align: left;
+	background-color: #f1f2f3;
+	border: 1px solid #e1e2e3;
+	padding: 8px;
+	border-radius: 4px;
+}
+	.tblDisplayUsers thead {
+		height: 20px;
+	}
+	.tblDisplayUsers td {
+		height: 10px;
+		margin: 10px;
+	}
+	/* Everything before this is tailored for the smallest screen size (320px) Adapting the layout 
+	for larger screen sizes will occur mostly in the media queries that follow. */
+	/* -------------------------------------------------------------------------------------------------------------------*/
+	/* -------------------------------------------------------------------------------------------------------------------*/
+	/*           M E D I A  Q U E R I E S              -------------------------------------------------------------------*/
+	/* -------------------------------------------------------------------------------------------------------------------*/
+	/* -------------------------------------------------------------------------------------------------------------------*/
+	/* M E D I A  Q U E R Y  333 --------- this is the first "bump up" from the smallest screen size ---------------------------*/
+	@media (min-width: 333px) { /*this used to be  420 */
+		/*.container {max-width: 540px;}
+	.carousel img {width:100%;min-width:600px;max-width:600px;height:100%!important;}*/
+		/*body {font-size: .7rem;}*/
+		/*#navsub {width:14%;} #navsub should not appear on the default (splash) page */
+
+		#navsub a {font-size: .56rem; letter-spacing:normal;}
+	#navmain a {font-size: .56rem;letter-spacing: normal;
+	}
+	#sitecontent {width: 86%;/* site content needs to stay wide on splash page. */
+		/*padding: 10px 0px 0px 10px;*/
+		
+	}
+}
+
+/* M E D I A  Q U E R Y  530 -------------------------------------------------------------------*/
+@media (min-width: 530px) {
+	body {font-size:.6rem;}
+	#navmain a {font-size: .59rem; display:block; margin:12px 3px;}
+	#navmain {width:14%;} /*This effectively "turns on" the left menu. #sitecontent must be changed to reflect this change. */
+	#navsub {width: 14%;}
+	#navsub a {font-size: .59rem;display: block;margin: 12px 3px;letter-spacing:normal;}
+	#sitecontent {width: 72%;
+	padding: 1% 3% 1% 3%;}/* this creates room for the left navmain column to appear to the left instead of at the top.*/
+
+	.sitecontentSplash {width: 72%;}
+	h1 {font-size: 1.1rem;}
+	h2 {font-size: .9rem;}
+	h3 {font-size: .8rem;}
+	h4 {font-size: .7rem;}
+	h5 {font-size: .6rem;}
+	h6 {font-size: .5rem;}
+
+	.aboutMeFigureLeft {
+	width: 33%;
+	/*clear:right;*/
+	float:left;
+	margin:0% 2% 2% -18%;/* this switches the photos to display in the menu column */
+}
+.aboutMeFigureRight {
+	width: 33%;
+	/*clear:right;*/
+	margin:1% -18% 2% 2%;/*this allows the photo to occupy dead space under the navsub menu*/
+}
+}
+
+
+
+/* M E D I A  Q U E R Y  768 -------------------------------------------------------------------*/
+@media (min-width: 768px) {
+
+	#navmain {
+			padding-left: .5%;
+			padding-right: .5%;
+			width:14%;
+		}
+
+	#navsub {width:14%;}
+	#navmain a {font-size: .7rem;display:block;letter-spacing:normal;}
+	#navsub a {font-size: .7rem;}
+	#sitecontent {
+		width: 72%;
+		padding: 2% 9% 2% 9%; /* this allows both navmain and navsub navigation menus on all pages (except for the splash page) */
+		/*background-color: lightyellow;*/
+	}
+	.sitecontentSplash {width: 72% !important;}
+
+	body {font-size: .75rem;}
+	h1 {font-size: 1.3rem;}
+	h2 {font-size: 1.2rem;}
+	h3 {font-size: 1.1rem;}
+	h4 {font-size: 1rem;}
+	h5 {font-size: .9rem;}
+	h6 {font-size: .8rem;}
+
+	.footer a {
+		padding: .6% 1.2%;
+		margin: 0;
+		font-size: .6rem; /**/
+		/*	.container {max-width: 720px;}
+	.carousel img {max-width: 768px;}*/
+	}
+
+
+
+/* M E D I A  Q U E R Y  -------------------------------------------------------------------*/
+@media (min-width: 992px) {
+	/*.container {max-width: 960px;}
+	.carousel img {max-width: 1200px;}
+	.carousel-inner {background-color: transparent;}*/
+
+	body {font-size: .8em;}/*  */
+	h1 {font-size: 1.5rem;	}
+	h2 {font-size: 1.3rem;	}
+	h3 {font-size: 1.4rem;	}
+	h4 {font-size: 1.55rem;	}
+	h5 {font-size: 1.5rem;	}
+	h6 {font-size: 1.35rem;	}
+}
+
+
+
+	/* M E D I A  Q U E R Y  -------------------------------------------------------------------*/
+	@media (min-width: 1200px) {
+		
+		#navmain a {font-size: .8rem;}                                                             
+		#navsub a {font-size: .8rem;}
+		#sitecontent {width: 70%;}
+		.sitecontentSplash {width: 72%;}
+		/*  */	
+		body {font-size: 1rem;line-height:1.3;}	
+		h1 {font-size: 1.7rem;	}
+		h2 {font-size: 1.6rem;	}
+		h3 {font-size: 1.5rem;	}
+		h4 {font-size: 1.5rem;	}
+		h5 {font-size: 1.5rem;	}
+		h6 {font-size: 1.45rem;	}
+		
+
+
+	/*	.container {
+			max-width: 1140px;
+		}
+
+		.carousel img {
+			width: 100%;
+			max-width: 1600px;
+		}*/
+	}
+
+
+	/* M E D I A  Q U E R Y  -------------------------------------------------------------------*/
+	@media (min-width: 1600px) {
+	/*	.container {max-width: 2560px;}
+		.carousel img {max-width: 2560px;}*/
+	}

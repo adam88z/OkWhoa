@@ -1,0 +1,106 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+
+    $(document).ready(function () {
+        console.log("Experience home page");
+        $("#banner0").addClass("hidden");
+        //$("#banner5").removeClass("hidden");
+        
+        $("#ucMenuExperience").addClass("hidden");
+        $("#ucMenuAboutMe").addClass("hidden");
+        $("#navmain").addClass("hidden");
+        $("#navsub").addClass("hidden");
+        // the following code is to re-purpose the existing divs to work with the photography page.
+        //It may be better to create an alternate __Layout page just for photography.
+        $("#sitecontent").css({ "background-color": "#222222", "width": "100%" });
+        $("#sitecontainer").css({ "background-color": "#222222" });
+        $("body").css({ "background-color": "#222222" });
+
+    });
+</script>
+
+@*Note to self: Either modify this page to undo a lot of the _Layout page or create a new _Layout page intended only for displaying photography. *@
+
+
+    <div id="pageContent">This is a space to put a page title  </div>
+
+    <div id="carouselHolder" class="carousel slide" data-ride="carousel" style="min-height: 400px;">
+
+
+        <div class="carousel-inner">
+
+
+            <div class="item active"> <img src="~/Content/images/portfolio/medium/image__c.jpg" class="d-block w-100" alt="image__c" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__j.jpg" class="d-block w-100" alt="image__j" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_zf.jpg" class="d-block w-100" alt="image_zf" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_za.jpg" class="d-block w-100" alt="image_za" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__d.jpg" class="d-block w-100" alt="image__d" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__a.jpg" class="d-block w-100" alt="image__a" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__r.jpg" class="d-block w-100" alt="image__r" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__w.jpg" class="d-block w-100" alt="image__w" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_zn.jpg" class="d-block w-100" alt="image_zg" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__dd.jpg" class="d-block w-100" alt="image__dd" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_zg.jpg" class="d-block w-100" alt="image_zg" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__u.jpg" class="d-block w-100" alt="image__u" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_zd.jpg" class="d-block w-100" alt="image_zd" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__h.jpg" class="d-block w-100" alt="image__h" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_zm.jpg" class="d-block w-100" alt="image_zg" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__i.jpg" class="d-block w-100" alt="image__i" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__s.jpg" class="d-block w-100" alt="image__s" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_zi.jpg" class="d-block w-100" alt="image_zi" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_ze.jpg" class="d-block w-100" alt="image_ze" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__f.jpg" class="d-block w-100" alt="image__f" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__ff.jpg" class="d-block w-100" alt="image__ff" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__m.jpg" class="d-block w-100" alt="image__m" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__g.jpg" class="d-block w-100" alt="image__g" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__v.jpg" class="d-block w-100" alt="image__v" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image__gg.jpg" class="d-block w-100" alt="image__gg" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_zh.jpg" class="d-block w-100" alt="image_zh" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_goodfellasimage.jpg" class="d-block w-100" alt="image_goodfellasimage_zh" /> </div>
+            <div class="item"> <img src="~/Content/images/portfolio/medium/image_Tucco_Portfolio_1.jpg" class="d-block w-100" alt="" /> </div>
+
+            <!--  <div  class="carousel-item"> <img src="~Content/images/portfolio/medium/image__hh.jpg"  class="d-block w-100" alt="image__hh" /> </div>
+             <div class="carousel-item"> <img src="~/Content/images/portfolio/medium/image_zc.jpg"  class="d-block w-100" alt="image_zc" /> </div>
+             <div class="carousel-item"> <img src="~/Content/images/portfolio/medium/image__aa.jpg"  class="d-block w-100" alt="image__aa" /> </div>
+             <div class="carousel-item"> <img src="~/Content/images/portfolio/medium/image__k.jpg"  class="d-block w-100" alt="image__k" /> </div>
+             <div class="carousel-item"> <img src="~/Content/images/portfolio/medium/image__z.jpg"  class="d-block w-100" alt="image__z" /> </div>
+             <div class="carousel-item"> <img src="~/Content/images/portfolio/medium/image__l.jpg"  class="d-block w-100" alt="image__l" /> </div>
+             <div class="carousel-item"> <img src="~/Content/images/portfolio/medium/image__cc.jpg"  class="d-block w-100" alt="image__cc" /> </div>
+             <div class="carousel-item"> <img src="~/Content/images/portfolio/medium/image_zb.jpg"  class="d-block w-100" alt="image_zb" /> </div>
+             <div class="carousel-item"> <img src="~/Content/images/portfolio/medium/image_zj.jpg"  class="d-block w-100" alt="image_zj" /> </div>
+             -->
+        </div>
+
+        <!--<div id="carouselExampleControls"  >
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+        </div> <!-- end carouselExampleControls-->
+
+    </div>
+
+
+    <!-- The following code was intended to work with SlidesLoader.js
+            <div id="widthHeightBlock" class="clearfix" style="background-color:yellow;">
+        <p>widthHeightBlock</p>
+    </div>-->
+
+    <script>
+        $(document).ready(function () {
+            $('#carouselHolder').carousel({
+                interval: 4200,
+            });
+        }); //end document.ready
+    </script>
+
+
+    <!--<script src="Scripts/slidesloader.js"></script>-->

@@ -1,0 +1,138 @@
+﻿@model OkWhoa.Website.Models.IndexVM
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<script>
+    /*this was moved here from _Layout*/
+    /*Hide and unhide menu items as appropriate*/
+    /*This is the Splash Page. */
+    $(document).ready(function () {
+        //$("#DesignBanner").addClass("hidden"); //already hidden
+        //$("#banner0").removeClass("hidden"); // this banner is displayed on the Splash page (Lucy's rocks)
+        //$("#banner4").removeClass("hidden"); // this is displayed on the Splash page
+        //$("#ucMenuExperience").addClass("hidden");
+        //$("#ucMenuDesign").addClass("hidden");/*These user controls may not be appropriate here. they must be changed to whatever MVC wants.*/
+        //$("ucMenuAboutMe").addClass("hidden");/* this is new to see what happens*/
+
+        //$("#navmain").removeClass("hidden");/* navmain should never be hidden in the first place.  */
+        /*$("#navsub").addClass("hidden"); */
+        /**/
+    });
+
+    /*The Banner is unhidden and the appropriate menu(s) for the Splash page are unhidden. */
+    $(document).ready(function () {
+        console.log("Splash page. DesignBanner is hidden. ");
+        //$("#DesignBanner").addClass("hidden");//#DesignBanner is hidden on the _Layout page
+        $("#banner0").removeClass("hidden"); // this is displayed on the Splash page
+        $("#sitecontent").addClass("sitecontentSplash");
+    });
+</script>
+
+
+<style>
+
+
+    #txtFirstName {
+        border-radius: 9px;
+    }
+</style>
+
+<div id="mymodal" style="position:fixed; left: 0; top: 0; height: 100vh; width: 100vw; z-index: 30000; background-color: rgba(111,111,111,.80); display: none; text-align:center;">
+    <div id="myInnerModal" style="">
+        <img id="innerModalImage" src="" alt="" style="" />
+    </div>
+</div>
+
+
+<!--This is the DisplayTable. It's purpose is to plug the results from the Model into an html table.
+    The Model is getting these user names from a database call.
+    -->
+<table class="table-condensed tblAddUsers">
+    <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><textarea id="txtFirstName"></textarea></td>
+            <td><textarea id="txtLastName"></textarea></td>
+            <td><textarea id="txtEmail"></textarea></td>
+            <td><button class="glyphicon glyphicon-plus" id="btnSendData">Add</button></td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table tblDisplayUsers">
+    <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var user in Model.Users)
+        {
+            <tr>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.Email</td>
+                <td><button id="@user.ID" class="glyphicon glyphicon-remove" onclick="deleteUser(this)"></button></td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+<br />
+<br />
+
+<!--
+<div ID="aboutmecontent">
+
+</div> aboutmecontent -->
+
+
+<script>
+    $("#btnSendData").on("click", function () {
+        sendData();
+    });
+
+    function sendData() {
+        var firstname = $("#txtFirstName").val();
+        var lastname = $("#txtLastName").val();
+        var email = $("#txtEmail").val();
+
+        $.ajax({
+            url: '@Url.Action("Index", "Home")',
+            type: 'POST',
+            data: {
+                FirstName: firstname,
+                LastName: lastname,
+                Email: email
+            },
+            success: function () {
+                alert("Success");
+            }
+        });
+    }
+
+    function deleteUser(x) {
+        var id = x.id;
+
+        $.ajax({
+            url: '@Url.Action("DeleteUser", "Home")',
+            type: 'POST',
+            data: { id: id },
+            success: function () {
+                alert("Success");
+            }
+        });
+    }
+</script>

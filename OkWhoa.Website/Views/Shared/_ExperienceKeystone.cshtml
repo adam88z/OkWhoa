@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+
+    $(document).ready(function () {
+        console.log("Experience home page");
+        $("#banner0").toggleClass("hidden");
+        $("#banner5").removeClass("hidden");
+        $("#ucMenuExperience").removeClass("hidden");
+        $("#ucMenuAboutMe").addClass("hidden");
+
+    });
+</script>
+
+
+
+
+<div id="experiencecontent">
+
+    <img src="~/Content/images/experience/Keystone_Logo.png" class="experienceLogo" alt="Keystonelogo">
+
+
+
+    <br />
+    <h1>Keystone Collections Group</h1>
+    <h3>
+        546 Wendell Road<br />
+        Irwin, PA 15642
+    </h3>
+    <br />
+    <h4>Front-End Developer</h4>
+    <p>5/6/2014 – 1/18/2016</p>
+    <br />
+    <p>Keystone Collections Group is the tax collection agency for municipalities located primarilry in Southeastern Pennsylvania.</p>
+    <img src="images/experience/keystone_login.jpg" class="experienceFigure floatRight" alt="">
+    <p>The project I was responsible for was <a href="https://efile.keystonecollects.com/Account/LogOn?ReturnUrl=%2f"><em>e-file</em></a>, an MVC-based application that provides taxpayers a way to file municipal taxes and estimates on-line.</p>
+    <p>My role was to create a responsive, mobile-friendly front-end for “<em>e-file</em>” the company’s public-facing on-line tax return application using a style guide, Bootstrap and industry-standard responsive web development techniques.</p>
+
+    <p>The project involved approximately 90 unique pages and a dozen or so modals. Starting with the existing MVC code, I re-worked each of the pages to appear attractive and to function responsively while keeping the logic intact and preserving all the existing functionality.</p>
+
+    <p>I was working in a Visual Studio / TFS environment and using primarily Bootstrap, custom CSS, Javascript and Jquery. It was necessary to analyze the existing code to understand how the application worked and how to add or modify code to alter the User Interface without disturbing the underlying application.</p>
+    <p><em>e-file</em> is the company’s flagship program and it is their primary connection with the taxpayers who use the application. It would not be an exaggeration to say that they have a lot riding on users being able to have a positive and painless experience while using the site. The application went live on January 12 2016 and operated flawlessly through many hundreds of thousands of transactions. Many people now can&#8212;and are&#8212;filing this year’s tax returns using their smart phones.</p>
+    <p>
+        Due to the extraordinarily sensitive nature of the data this company deals with, the strictest standards of data security are enforced. Outside Keystone's servers no copy of my work exists making it difficult to present a catalog of my work there. The site is available to the public. However, in order to examine all my work, you will need to go to their site and use <em>e-file</em> to file a tax return or estimate.
+    </p><p>
+        <a href="https://UATefile.keystonecollects.com/Account/LogOn?ReturnUrl=%2f">UAT</a>
+    </p>
+
+    <!-- end .experiencecontent -->
+</div>
+
+<div class="experiencesidebar2">
+    <div class="experiencenav">
+        <!--#include virtual="/_sitefiles/include/SPRYmainmenu.html" -->
+        <!-- end .sidebar2 -->
+    </div>
+    <!-- end .experiencesidebar2 -->
+</div>
+
+
+

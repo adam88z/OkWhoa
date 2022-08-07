@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+
+    $(document).ready(function () {
+        console.log("Experience home page");
+        $("#banner0").toggleClass("hidden");
+        $("#banner5").removeClass("hidden");
+        $("#ucMenuExperience").removeClass("hidden");
+        $("#ucMenuAboutMe").addClass("hidden");
+
+    });
+</script>
+
+
+
+<div id="experiencecontent">
+
+    <div class="experiencelogonew">
+        <img src="~/Content/images/experience/unison.png">
+    </div>
+
+    <div class="experiencefigurewrappermain" style="">
+        <img src="~/Content/images/experience/monte-carlo.jpg" alt="">
+        <!-- -->
+    </div>
+
+    <img class="experienceimageright" src="~/Content/images/experience/" alt="">
+
+    <h1>
+        Unison<br />
+        Technology, Inc.
+    </h1>
+
+    <h3>
+        410 Rouser Road<br />
+        Coraopolis, PA 15108
+    </h3>
+    <h4>Software developer</h4>
+    <p>8/1986 – 4/1987</p>
+
+    <p>Contributed to the design and development of <strong>!Predict,</strong> a spreadsheet-style predictive analysis product. Now a staple of modern spreadsheets, the ability to create Monte-Carlo simulations and incorporate a variety of statistical modeling algorithms into spreadsheet applications was a radically new concept at the time.</p>
+
+</div>
+<!-- end .experiencecontent -->

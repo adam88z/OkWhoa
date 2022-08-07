@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+    $(document).ready(function () {
+        console.log("Experience home page");
+        $("#banner0").toggleClass("hidden");//this is needed to hide lucy's rocks
+        $("#banner7").toggleClass("hidden");
+        $("#ucAboutMe").removeClass("hidden");
+    });
+</script>
+
+<div id="aboutmecontent">
+    <h1>This is the About Me page</h1>
+
+    <p>Well, isn't the entire website about me? What's up with that?</p>
+    <p>The script that contains the function "modalAjax" is on this page. </p>
+    <p>But, the modals is still ain't workin.' </p>
+    <p>Some text is needed as a spacer.</p>
+    <img src="../Content/images/aboutme/Tree_03.jpg" class="aboutMeFigureRight" />
+
+    <h1>h1 - Text size example</h1>
+    <h2>h2 - Text size example</h2>
+    <h3>h3 - Text size example</h3>
+    <h4>h4 - Text size example</h4>
+    <h5>h5 - Text size example</h5>
+    <h6>h6 - Text size example</h6>
+
+</div>@* end of #aboutmecontent*@
+
+
+
+<script>
+
+    //this function, "modalAjax" is the single function that all the above ajax calls will run upon a successful ajax response.
+    function modalAjax() {
+        $("img").on('click', function () {
+            $("#mymodal").show();
+            var meeks = $(this).attr('src');
+            $("#innerModalImage").attr('src', meeks);
+
+        })
+        $(this).mousedown(function () {
+            $("#mymodal").hide();
+        });
+
+        $(document).mouseup(function (e) {
+            if (!$("#myInnerModal").is(e.target) && $("#myInnerModal").has(e.target).length === 0) {
+                $('#mymodal').hide();
+            }
+        })
+
+    };
+</script>

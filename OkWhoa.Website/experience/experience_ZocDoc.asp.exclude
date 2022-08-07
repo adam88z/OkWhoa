@@ -1,0 +1,65 @@
+<!--#include virtual="/_sitefiles/include/openhead.html" -->
+<title>Richard James | Experience | UPMC</title>
+<style type="text/css"></style>
+</head>
+
+<body>
+<div class="topbanner">
+	<img src="/images/Fresh_horiz_10_3000X200.jpg" style="opacity:1;">
+</div>
+<div class="sitecontainer" style="position:relative;">
+	
+	<!--#include virtual="/_sitefiles/include/page_header.html" --> 
+		<!-- page title goes here (no HTML - Limit: 30 characters) --> 
+		Work Experience 
+		<!--#include virtual="/_sitefiles/include/page_header_close.html" -->
+	
+	<div class="sidebar1">
+		<!--#include virtual="/_sitefiles/include/menumain.html" --> 
+		<!--<p>Left Sidebar Text</p> --> 
+		<!-- end .sidebar1 -->
+	</div>
+	<div class="experiencecontent ">
+		<div class="experiencelogonew" style="">
+			<img  src="images/ZocDoc.jpg"   alt="ZocDoc logo">
+		</div>
+		<div class="experiencefigurewrappermain" style="">
+			<img  src="/images/experience/zocdoc_20.jpg"    alt="">
+		</div>
+		
+		<!-- <h1>ZocDoc</h1> -->
+		
+		<h2><a href="http://www.zocdoc.com/">www.zocdoc.com</a><br />
+			568 Broadway, 9th Floor<br />
+			New York, NY</h2>
+		<br />
+		<h4>Photographer</h4>
+		<p>Provide on-location photography of physicians, staff and facilities for a national database of medical practices. This is a young growing company with exceedingly high standards demanding the highest degree of professionalism and quality. I was chosen as the exclusive photographer for the Pittsburgh region.</p>
+		<figure class="experiencefigureleft" style="width:33%;" target="_blank"> <a href="/images/experience/zocdoc_polina_02.jpg"> <img class="experienceimage" src="/images/experience/zocdoc_polina_01.jpg"    alt=""> </a>
+			<figcaption> </figcaption>
+		</figure>
+		<figure class="experiencefigureright" style="width:33%;" target="_blank"> <a href="/images/experience/zocdoc_middleton_01.jpg"> <img class="experienceimage" src="/images/experience/zocdoc_runco_01.jpg"    alt="Middleton"> </a>
+			<figcaption> Dr. Middleton </figcaption>
+		</figure>
+		
+		<p>The work involved scheduling appointments and setting up on-location shoots with the doctors, office personnel, clinical facilities and images of the office location to help potential patients choose and find the practice that suits them.</p>
+		<p>Unfortunately, due to difficulties related to the speed with which penetration into the Pittsburgh area was occurring, I could not continue to offer my services to this outstanding company.</p>
+		
+		<!-- end .content -->
+	</div>
+	<div class="experiencesidebar2">
+		<div class="experiencenav" >
+			<!--#include virtual="/_sitefiles/include/SPRYmainmenu.html" -->
+		</div>
+		
+		<!-- end .sidebar2 -->
+	</div>
+	
+	<!-- end .container -->
+</div>
+<div class="footer">
+	<!--#include virtual="/_sitefiles/include/footer.html" --> 
+	<br style="clear:both;" />
+</div>
+</body>
+</html>
