@@ -3,49 +3,16 @@
 }
 <script>
 
-
-    /*This is the Military Service Page. */
     $(document).ready(function () {
-
         $("#banner0").addClass("hidden"); // this is displayed on the Splash page
         $("#banner1").removeClass("hidden");
-        $("#ucAboutMe").toggleClass("hidden")
-        //$("#banner2").addClass("hidden");
-        //$("#banner3").addClass("hidden");
-        //$("#banner4").addClass("hidden");
-        //$("#ucMenuExperience").addClass("hidden");
+        $("#ucAboutMe").removeClass("hidden");
 
-        /**/
-
+            modalAjax();
     });
+  
 </script>
 
-<script> // this is hack code not to be taken too seriously it does display the modal 
-    $(document).ready(function () {
-
-        //$('#aboutmecontent').load('aboutme/aboutme_Active.html #aboutMeContent');
-
-
-       // $('#aboutmeHome').click(function () {
-          //  $('#aboutmecontent').load('aboutme/aboutme_Active.html #aboutMeContent',
-               // function (responseText, textStatus, XMLHttpRequest) {
-       var textStatus = "success"
-                    if (textStatus == "success") {
-                        modalAjax();
-                    }
-                    if (textStatus == "error") {
-                        alert(modalstring);
-                    }
-                });
-           // preventDefault();
-       // });
-</script>
-
-@*<div id="mymodal" style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; z-index: 30000; display:none; background-color: rgba(111,111,111,.80);  text-align: center;">
-    <div id="myInnerModal" style="">
-        <img id="innerModalImage" src="" alt="" style="" />
-    </div>
-</div>*@
 
 <div class="pageTitle">Military Service</div>
 
@@ -203,11 +170,6 @@
 
 
 
-<!--Probably garbage-- >
+<!--Probably garbage
 <img src="../Content/images/aboutme/Military_SR71_01_lage.JPG" class="right modal" style="max-width:50%;border:red 1px solid;" />
-<img src="../Content/images/aboutme/Military_HH-53_crash.jpg" class="aboutMeFigureRight clearRight" />
-
-
-
-
-
+<img src="../Content/images/aboutme/Military_HH-53_crash.jpg" class="aboutMeFigureRight clearRight" />-->

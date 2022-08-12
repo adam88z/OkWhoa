@@ -1,7 +1,7 @@
 ﻿@charset "utf-8";
 
 
-/*Th stylesheet below is optimized for the smallest screns that might be encountered. 
+/*The stylesheet below is optimized for the smallest screens that might be encountered. 
 	In the media queries is where everything is set to look good on larger screens. 
 	So, if these styles seem weird, that's why.*/
 	 
@@ -37,7 +37,7 @@ body {
 	font-size: .56rem;
 	font-family: 'Poppins', sans-serif;/**/
 	
-	line-height:.5;/*setting line-height low fixes the gap under the banner image. Set it back to 1.2 on the sitecontainer*/
+	/*line-height:.5;setting line-height low fixes the gap under the banner image. Set it back to 1.2 on the sitecontainer*/
 	color: #5b3a1f; /*dark umber*/
 
 	background-color: #fcf9f7; 
@@ -64,10 +64,10 @@ h5 {font-size: .5rem;}
 h6 {font-size: .45rem;}
 
 .pageTitle {/*page title should span entire screen and maybe not depentent on fontsize */
-		font-size:.9rem;
-		margin:-33px 0px 21px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
+		font-size:1.3rem;
+		margin:6px 0px 20px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
 		background-color: transparent; 
-		color: #bbbbbb;/**/
+		color: #aaaaaa;/**/
 		width:100%;
 }
 
@@ -502,31 +502,31 @@ width:100%;
 	}
 #navmain {			
 		width:100%; /*this is needed here to make the main menu display across top of screen at small sizes */
-		padding:9px 0px;
+		padding:5px 3px;
 		float:left;
 	}
 #navsub {
 		width:14%;
-		padding:9px 0px;
+		padding:5px 3px;
 		float:right;		
 }
 #navmain a {
-		font-size:.55rem;
+		font-size:.58rem;
 		background-color:#fafafa; /**/
 		letter-spacing:-1px;/*this works. Great for small screen. Remember to turn this off in media query*/
 		line-height:1.2;/**/
-		padding:3px 3px;
+		padding:4px 3px;
 		margin:6px 0px;/* at small screen sizes the margin needs to be set in pixels*/
 }
 
 #navsub a { /*the settings here are for the smallest screens (320px wide)*/
-		font-size:.55rem;
+		font-size:.58rem;
 		background-color:#fafafa; /**/
 		letter-spacing:-1px;/*this works. Great for small screen*/
 		color:red; /*this needs a complete cache clearing to see the red text s*/
 		line-height:1.2;
 		display: block;/*this is needed to make the buttons stack vertically*/
-		padding:3px;/* for smallest screens this needs to be very low */
+		padding:4px;/* for smallest screens this needs to be very low */
 		margin:6px 0px; /* for smallest screens these need to be very low */
 		text-align:center;	
 }
@@ -699,7 +699,7 @@ width:100%;
 	#navsub a {font-size: .7rem;}
 	#sitecontent {
 		width: 72%;
-		padding: 2% 9% 2% 9%; /* this allows both navmain and navsub navigation menus on all pages (except for the splash page) */
+		padding: 2% 3% 2% 3%; /* this allows both navmain and navsub navigation menus on all pages (except for the splash page) */
 		/*background-color: lightyellow;*/
 	}
 	.sitecontentSplash {width: 72% !important;}
@@ -719,7 +719,11 @@ width:100%;
 		/*	.container {max-width: 720px;}
 	.carousel img {max-width: 768px;}*/
 	}
+	.pageTitle { /*page title should span entire screen and maybe not depentent on fontsize */
+		font-size: 1.6rem;
+		margin: 21px 0px 30px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
 
+	}
 
 
 /* M E D I A  Q U E R Y  -------------------------------------------------------------------*/

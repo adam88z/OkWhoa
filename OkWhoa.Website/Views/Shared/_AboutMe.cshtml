@@ -4,12 +4,14 @@
 
 <script>
     $(document).ready(function () {
-        console.log("Experience home page");
-        $("#banner0").toggleClass("hidden");//this is needed to hide lucy's rocks
-        $("#banner7").toggleClass("hidden");
+        $("#banner0").toggleClass("hidden");
+        $("#banner6").removeClass("hidden");
         $("#ucAboutMe").removeClass("hidden");
+        modalAjax();
     });
 </script>
+
+<div class="pageTitle">About Me</div>
 
 <div id="aboutmecontent">
     <h1>This is the About Me page</h1>
@@ -33,7 +35,7 @@
 
 <script>
 
-    //this function, "modalAjax" is the single function that all the above ajax calls will run upon a successful ajax response.
+    //this function, "modalAjax" is probably defined elsewhere..
     function modalAjax() {
         $("img").on('click', function () {
             $("#mymodal").show();
