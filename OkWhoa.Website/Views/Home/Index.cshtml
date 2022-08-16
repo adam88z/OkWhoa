@@ -12,6 +12,7 @@
         //$("#DesignBanner").addClass("hidden");//#DesignBanner is hidden on the _Layout page
         $("#banner0").removeClass("hidden"); // this is displayed on the Splash page
         $("#sitecontent").addClass("sitecontentSplash");
+        $("#adam-modal").removeClass("hidden");
     });
 </script>
 
@@ -22,6 +23,17 @@
     #txtFirstName {
         border-radius: 9px;
     }
+    #adamModalButton {
+        height: 50px;
+        width: 80px;
+        background-color: red;
+        
+    }
+    #adamModalButton:hover {
+        height: 80px;
+        width: 50px;
+        background-color: green;
+    }
 </style>
 
 
@@ -30,8 +42,9 @@
 <!--This is the DisplayTable. It's purpose is to plug the results from the Model into an html table.
     The Model is getting these user names from a database call.
 -->
+<div id="adamModalButton"><p>button</p></div>
 
-<div class="adam-modal">
+<div class="adam-modal hidden">
     <br />
     <table class="table-condensed tblAddUsers ">
         <thead>
@@ -128,3 +141,5 @@
         });
     }
 </script>
+
+
