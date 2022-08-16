@@ -4,21 +4,7 @@
 }
 
 <script>
-    /*this was moved here from _Layout*/
-    /*Hide and unhide menu items as appropriate*/
-    /*This is the Splash Page. */
-    $(document).ready(function () {
-        //$("#DesignBanner").addClass("hidden"); //already hidden
-        //$("#banner0").removeClass("hidden"); // this banner is displayed on the Splash page (Lucy's rocks)
-        //$("#banner4").removeClass("hidden"); // this is displayed on the Splash page
-        //$("#ucMenuExperience").addClass("hidden");
-        //$("#ucMenuDesign").addClass("hidden");/*These user controls may not be appropriate here. they must be changed to whatever MVC wants.*/
-        //$("ucMenuAboutMe").addClass("hidden");/* this is new to see what happens*/
 
-        //$("#navmain").removeClass("hidden");/* navmain should never be hidden in the first place.  */
-        /*$("#navsub").addClass("hidden"); */
-        /**/
-    });
 
     /*The Banner is unhidden and the appropriate menu(s) for the Splash page are unhidden. */
     $(document).ready(function () {
@@ -38,11 +24,7 @@
     }
 </style>
 
-<div id="mymodal" style="position:fixed; left: 0; top: 0; height: 100vh; width: 100vw; z-index: 30000; background-color: rgba(111,111,111,.80); display: none; text-align:center;">
-    <div id="myInnerModal" style="">
-        <img id="innerModalImage" src="" alt="" style="" />
-    </div>
-</div>
+
 
 
 <!--This is the DisplayTable. It's purpose is to plug the results from the Model into an html table.
@@ -110,9 +92,9 @@
         sendData();
     });
 
-    //function showModal() {
-    //    $(".adam-modal").showhide();
-    //}
+    function showModal() {
+        $(".adam-modal").showhide();
+    }
 
     function sendData() {
         var firstname = $("#txtFirstName").val();

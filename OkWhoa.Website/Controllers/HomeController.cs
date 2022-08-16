@@ -91,6 +91,12 @@ namespace OkWhoa.Website.Controllers
 
             return PartialView("_Photography");
         }
+        public ActionResult Login()
+        {
+            ViewBag.Message = "Login page.";
+
+            return PartialView("_Login");
+        }
 
         public ActionResult About()
         {

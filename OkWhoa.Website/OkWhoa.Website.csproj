@@ -918,6 +918,7 @@
     <Content Include="Views\Shared\_DesignPrint.cshtml" />
     <Content Include="Views\Shared\_DesignBanners.cshtml" />
     <Content Include="Views\Shared\_DesignWebsites.cshtml" />
+    <Content Include="Views\Shared\_Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="aboutme\_notes\" />
