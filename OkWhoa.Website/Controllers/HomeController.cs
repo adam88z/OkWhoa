@@ -13,42 +13,7 @@ namespace OkWhoa.Website.Controllers
     {
         public ActionResult Index()
         {
-            IndexVM model = new IndexVM();
-            using (OkWhoaSQLEntities okWhoaSQLEntities = new OkWhoaSQLEntities())
-            { 
-                var users = okWhoaSQLEntities.Users;
-
-                foreach (var item in users)
-                {
-                    OkWhoa.Website.Models.User user = new OkWhoa.Website.Models.User();
-                    user.ID = item.ID;
-                    user.FirstName = item.FirstName;
-                    user.LastName = item.LastName;
-                    user.Email = item.Email;
-                    model.Users.Add(user);
-
-                }
-            }
-            return View(model);
-        }
-
-        [HttpPost]
-        public ActionResult Index(IndexVM model)
-        {
-            using (OkWhoaSQLEntities okWhoaSQLEntities = new OkWhoaSQLEntities())
-            {
-
-                OkWhoa.Data.User user = new OkWhoa.Data.User();
-
-                user.FirstName = model.FirstName;
-                user.LastName = model.LastName;
-                user.Email = model.Email;
-
-                okWhoaSQLEntities.Users.Add(user);
-                okWhoaSQLEntities.SaveChanges();
-            }
-
-            return View(model);
+            return View();
         }
 
         [HttpPost]
@@ -95,7 +60,42 @@ namespace OkWhoa.Website.Controllers
         {
             ViewBag.Message = "Login page.";
 
-            return PartialView("_Login");
+            LoginVM model = new LoginVM();
+            using (OkWhoaSQLEntities okWhoaSQLEntities = new OkWhoaSQLEntities())
+            {
+                var users = okWhoaSQLEntities.Users;
+
+                foreach (var item in users)
+                {
+                    OkWhoa.Website.Models.User user = new OkWhoa.Website.Models.User();
+                    user.ID = item.ID;
+                    user.FirstName = item.FirstName;
+                    user.LastName = item.LastName;
+                    user.Email = item.Email;
+                    model.Users.Add(user);
+
+                }
+            }
+            return PartialView("_Login", model);
+        }
+
+        [HttpPost]
+        public ActionResult Login(LoginVM model)
+        {
+            using (OkWhoaSQLEntities okWhoaSQLEntities = new OkWhoaSQLEntities())
+            {
+
+                OkWhoa.Data.User user = new OkWhoa.Data.User();
+
+                user.FirstName = model.FirstName;
+                user.LastName = model.LastName;
+                user.Email = model.Email;
+
+                okWhoaSQLEntities.Users.Add(user);
+                okWhoaSQLEntities.SaveChanges();
+            }
+
+            return View(model);
         }
 
         public ActionResult About()

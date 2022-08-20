@@ -18,78 +18,12 @@
 </script>
 
 
-<style>
-
-
-    #txtFirstName {
-        border-radius: 9px;
-    }
-    #adamModalButton {
-        height: 50px;
-        width: 80px;
-        background-color: red;
-        
-    }
-    #adamModalButton:hover {
-        height: 80px;
-        width: 50px;
-        background-color: green;
-    }
-</style>
 
 
 
 
-<!--This is the DisplayTable. It's purpose is to plug the results from the Model into an html table.
-    The Model is getting these user names from a database call.
--->
-<div id="adamModalButton"><p>button</p></div>
 
-<div class="adam-modal">
-    <br />
-    <table class="table-condensed tblAddUsers ">
-        <thead>
-            <tr>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>Email</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><textarea id="txtFirstName"></textarea></td>
-                <td><textarea id="txtLastName"></textarea></td>
-                <td><textarea id="txtEmail"></textarea></td>
-                <td><button class="glyphicon glyphicon-plus" id="btnSendData">Add</button></td>
-            </tr>
-        </tbody>
-    </table>
-    <br />
-    <table class="table tblDisplayUsers">
-        <thead>
-            <tr>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>Email</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
 
-            @foreach (var user in Model.Users)
-            {
-                <tr>
-                    <td>@user.FirstName</td>
-                    <td>@user.LastName</td>
-                    <td>@user.Email</td>
-                    <td><button id="@user.ID" class="glyphicon glyphicon-remove" onclick="deleteUser(this)"></button></td>
-                </tr>
-            }
-
-        </tbody>
-    </table>
-</div>
 
 <!--
 <div ID="aboutmecontent">
@@ -97,50 +31,6 @@
 </div> aboutmecontent -->
 
 
-<script>
-    $("#adamModalButton").on("click", function () {
-        $(".adam-modal").toggle();
-    });
 
-    $("#btnSendData").on("click", function () {
-        sendData();
-    });
-
-    function showModal() {
-        $(".adam-modal").showhide();
-    }
-
-    function sendData() {
-        var firstname = $("#txtFirstName").val();
-        var lastname = $("#txtLastName").val();
-        var email = $("#txtEmail").val();
-
-        $.ajax({
-            url: '@Url.Action("Index", "Home")',
-            type: 'POST',
-            data: {
-                FirstName: firstname,
-                LastName: lastname,
-                Email: email
-            },
-            success: function () {
-                alert("Success");
-            }
-        });
-    }
-
-    function deleteUser(x) {
-        var id = x.id;
-
-        $.ajax({
-            url: '@Url.Action("DeleteUser", "Home")',
-            type: 'POST',
-            data: { id: id },
-            success: function () {
-                alert("Success");
-            }
-        });
-    }
-</script>
 
 

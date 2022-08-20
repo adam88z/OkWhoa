@@ -132,6 +132,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IndexVM.cs" />
+    <Compile Include="Models\LoginVM.cs" />
     <Compile Include="Models\Model1.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,18 +173,13 @@
     <Content Include="Content\images\aboutme\Backyard_Shrooms.jpg" />
     <Content Include="Content\images\aboutme\Backyard_Tucco_01.jpg" />
     <Content Include="Content\images\aboutme\Butterfly.jpg" />
-    <Content Include="Content\images\aboutme\Catcute.JPG" />
     <Content Include="Content\images\aboutme\curry.jpg" />
     <Content Include="Content\images\aboutme\DSC_2193_edited.jpg" />
-    <Content Include="Content\images\aboutme\Elvira.JPG" />
-    <Content Include="Content\images\aboutme\Emotions.JPG" />
     <Content Include="Content\images\aboutme\Family_01.jpg" />
     <Content Include="Content\images\aboutme\Family_Adam.JPG" />
     <Content Include="Content\images\aboutme\Family_Adam_8-15-13.jpg" />
-    <Content Include="Content\images\aboutme\FishTeeth.JPG" />
     <Content Include="Content\images\aboutme\Flamingos.JPG" />
     <Content Include="Content\images\aboutme\Food_curry.jpg" />
-    <Content Include="Content\images\aboutme\Gun.JPG" />
     <Content Include="Content\images\aboutme\HH-53_crash.jpg" />
     <Content Include="Content\images\aboutme\HomeImprovement_01.jpg" />
     <Content Include="Content\images\aboutme\HomeImprovement_02.jpg" />
@@ -269,7 +265,6 @@
     <Content Include="Content\images\aboutme\Military_U2_Cockpit2.JPG" />
     <Content Include="Content\images\aboutme\Military_U2_Cockpit3.JPG" />
     <Content Include="Content\images\aboutme\RICHIE.JPG" />
-    <Content Include="Content\images\aboutme\SuezCanal.JPG" />
     <Content Include="Content\images\aboutme\Surgery_01.jpg" />
     <Content Include="Content\images\aboutme\Surgery_Azari-013.jpg" />
     <Content Include="Content\images\aboutme\Surgery_DSCN2120.jpg" />
@@ -288,7 +283,6 @@
     <Content Include="Content\images\aboutme\Tree_DSC_2193_edited.jpg" />
     <Content Include="Content\images\aboutme\Tree_IMG_0961.JPG" />
     <Content Include="Content\images\aboutme\Tree_RICHIE.JPG" />
-    <Content Include="Content\images\aboutme\_BA2C7754.jpg" />
     <Content Include="Content\images\Adam_DSC_3493.jpg" />
     <Content Include="Content\images\bx_loader.gif" />
     <Content Include="Content\images\controls.png" />
@@ -821,6 +815,7 @@
     <Content Include="Content\images\portfolio\tiny\image__y.jpg" />
     <Content Include="Content\images\portfolio\tiny\image__z.jpg" />
     <Content Include="Content\images\_BA2C7754.jpg" />
+    <Content Include="Content\Site.css" />
     <Content Include="design\design1.html" />
     <Content Include="design\design2.asp" />
     <Content Include="design\design2.html" />
@@ -845,12 +840,16 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\images\design\TLV_Menu_6-page_Final-printed2.pdf" />
     <Content Include="experience\experience_USAF.asp.exclude" />
     <Content Include="experience\experience_ZocDoc.asp.exclude" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\images\design\TLV_Menu_6-page_Final-printed2.pdf" />
+    <None Include="Properties\PublishProfiles\OkWhoa.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -947,10 +946,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
