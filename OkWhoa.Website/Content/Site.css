@@ -34,7 +34,7 @@ html {
 body {		
 	padding: 0;
 	margin: 0;
-	font-size: .56rem;
+	font-size: .59rem;
 	font-family: 'Poppins', sans-serif;/**/
 	
 	/*line-height:.5;setting line-height low fixes the gap under the banner image. Set it back to 1.2 on the sitecontainer*/
@@ -64,8 +64,8 @@ h5 {font-size: .5rem;}
 h6 {font-size: .45rem;}
 
 .pageTitle {/*page title should span entire screen and maybe not depentent on fontsize */
-		font-size:1.3rem;
-		margin:6px 0px 20px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
+		font-size:1.1rem;
+		margin:3px 0px 20px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
 		background-color: transparent; 
 		color: #aaaaaa;/**/
 		width:100%;
@@ -486,7 +486,7 @@ width:100%;
 		display: inline-block;
 		padding:.7% 1.2%;	
 		margin:.1% .5% 1% .5%;
-		font-size:.58rem;/**/
+		font-size:.7rem;/**/
 	}
 
 
@@ -511,7 +511,7 @@ width:100%;
 		float:right;		
 }
 #navmain a {
-		font-size:.58rem;
+		font-size:.6rem;
 		background-color:#fafafa; /**/
 		letter-spacing:-1px;/*this works. Great for small screen. Remember to turn this off in media query*/
 		line-height:1.2;/**/
@@ -520,7 +520,7 @@ width:100%;
 }
 
 #navsub a { /*the settings here are for the smallest screens (320px wide)*/
-		font-size:.58rem;
+		font-size:.6rem;
 		background-color:#fafafa; /**/
 		letter-spacing:-1px;/*this works. Great for small screen*/
 		color:red; /*this needs a complete cache clearing to see the red text s*/
@@ -646,8 +646,8 @@ width:100%;
 		/*body {font-size: .7rem;}*/
 		/*#navsub {width:14%;} #navsub should not appear on the default (splash) page */
 
-		#navsub a {font-size: .56rem; letter-spacing:normal;}
-	#navmain a {font-size: .56rem;letter-spacing: normal;
+		#navsub a {font-size: .62rem; letter-spacing:normal;}
+	#navmain a {font-size: .62rem;letter-spacing: normal;
 	}
 	#sitecontent {width: 86%;/* site content needs to stay wide on splash page. */
 		/*padding: 10px 0px 0px 10px;*/
@@ -657,11 +657,11 @@ width:100%;
 
 /* M E D I A  Q U E R Y  530 -------------------------------------------------------------------*/
 @media (min-width: 530px) {
-	body {font-size:.6rem;}
-	#navmain a {font-size: .59rem; display:block; margin:12px 3px;}
+	body {font-size:.8rem;}
+	#navmain a {font-size: .7rem; display:block; margin:12px 3px;}
 	#navmain {width:14%;} /*This effectively "turns on" the left menu. #sitecontent must be changed to reflect this change. */
 	#navsub {width: 14%;}
-	#navsub a {font-size: .59rem;display: block;margin: 12px 3px;letter-spacing:normal;}
+	#navsub a {font-size: .7rem;display: block;margin: 12px 3px;letter-spacing:normal;}
 	#sitecontent {width: 72%;
 	padding: 1% 3% 1% 3%;}/* this creates room for the left navmain column to appear to the left instead of at the top.*/
 
@@ -735,7 +735,7 @@ width:100%;
 	.carousel img {max-width: 1200px;}
 	.carousel-inner {background-color: transparent;}*/
 
-	body {font-size: .8em;}/*  */
+	body {font-size: .85em;}/*  */
 	h1 {font-size: 1.5rem;	}
 	h2 {font-size: 1.3rem;	}
 	h3 {font-size: 1.4rem;	}
@@ -749,7 +749,7 @@ width:100%;
 	/* M E D I A  Q U E R Y  -------------------------------------------------------------------*/
 	@media (min-width: 1200px) {
 		
-		#navmain a {font-size: .8rem;}                                                             
+		#navmain a {font-size: .9rem;}                                                             
 		#navsub a {font-size: .8rem;}
 		#sitecontent {width: 70%;}
 		.sitecontentSplash {width: 72%;}

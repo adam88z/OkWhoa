@@ -816,34 +816,11 @@
     <Content Include="Content\images\portfolio\tiny\image__z.jpg" />
     <Content Include="Content\images\_BA2C7754.jpg" />
     <Content Include="Content\Site.css" />
-    <Content Include="design\design1.html" />
-    <Content Include="design\design2.asp" />
-    <Content Include="design\design2.html" />
-    <Content Include="design\design_active.html" />
-    <Content Include="design\design_banners.html" />
-    <Content Include="design\design_print.html" />
-    <Content Include="design\design_websites.html" />
-    <Content Include="design\outer_menu.html" />
-    <Content Include="experience\AATestPage.html" />
-    <Content Include="experience\experience_Alcoa.html" />
-    <Content Include="experience\experience_ASCE.html" />
-    <Content Include="experience\experience_BHP.html" />
-    <Content Include="experience\experience_HTA.html" />
-    <Content Include="experience\experience_Interior.html" />
-    <Content Include="experience\experience_Keystone.html" />
-    <Content Include="experience\experience_Pitt.html" />
-    <Content Include="experience\experience_RollsRoyce.html" />
-    <Content Include="experience\experience_Unison.html" />
-    <Content Include="experience\experience_UPMC.html" />
-    <Content Include="experience\experience_USAF.html" />
-    <Content Include="experience\experience_ZocDoc.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="experience\experience_USAF.asp.exclude" />
-    <Content Include="experience\experience_ZocDoc.asp.exclude" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
@@ -863,22 +840,6 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\Slideshow.js" />
     <Content Include="Scripts\slidesloader.js" />
-    <Content Include="UserControls\ucAboutMe.ascx" />
-    <Content Include="UserControls\ucAboutMe.ascx.vb">
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="UserControls\ucDesignBanner.ascx" />
-    <Content Include="UserControls\ucDesignBanner.ascx.vb">
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="UserControls\ucMainMenu.ascx" />
-    <Content Include="UserControls\ucMainMenu.ascx.vb">
-      <SubType>ASPXCodeBehind</SubType>
-    </Content>
-    <Content Include="UserControls\ucMenuDesign.ascx" />
-    <Content Include="UserControls\ucMenuDesign.ascx.vb" />
-    <Content Include="UserControls\ucMenuExperience.ascx" />
-    <Content Include="UserControls\ucMenuExperience.ascx.vb" />
     <Content Include="Views\Shared\_AboutMe.cshtml" />
     <Content Include="Views\Shared\_ExperienceAlcoa.cshtml" />
     <Content Include="Views\Shared\_ExperienceASCE.cshtml" />
@@ -936,10 +897,6 @@
     <Folder Include="Content\images\portfolio\tiny\_notes\" />
     <Folder Include="Content\images\source_files\" />
     <Folder Include="Content\images\_notes\" />
-    <Folder Include="design\_notes\" />
-    <Folder Include="experience\_notes\" />
-    <Folder Include="photography\" />
-    <Folder Include="UserControls\_notes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
