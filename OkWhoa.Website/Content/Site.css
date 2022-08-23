@@ -56,16 +56,16 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 2px 2px 1px hsla(0,0%,50%,.08);
 }
 
-h1 {font-size: .8rem;}
+h1 {font-size: .9rem;}
 h2 {font-size: .7rem;}
 h3 {font-size: .6rem;}
-h4 {font-size: .55rem;}
+h4 {font-size: .6rem;}
 h5 {font-size: .5rem;}
-h6 {font-size: .45rem;}
+h6 {font-size: .4rem;}
 
 .pageTitle {/*page title should span entire screen and maybe not depentent on fontsize */
 		font-size:1.1rem;
-		margin:3px 0px 20px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
+		margin:10px 0px 10px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
 		background-color: transparent; 
 		color: #aaaaaa;/**/
 		width:100%;
@@ -145,7 +145,7 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 /*	*/
 
 #sitecontent { /*sitecontent is the div that wraps around the contentplaceholder. sitecontentSplash will be used on the splash page*/
-	padding: 16px .025% 0% .025%; /* this was set to "33px 2% 0% 1.5%;" before. */
+	padding: 8px .025% 0% .025%; /* this was set to "33px 2% 0% 1.5%;" before. */
 	margin:0px auto;/* why 1px? 
 	margin-top:0px;*/
 	float: left;
@@ -716,11 +716,11 @@ width:100%;
 	p {font-size: .85rem;}
 
 	h1 {font-size: 1.3rem;}
-	h2 {font-size: 1.2rem;}
-	h3 {font-size: 1.1rem;}
-	h4 {font-size: 1rem;}
-	h5 {font-size: .9rem;}
-	h6 {font-size: .8rem;}
+	h2 {font-size: 1.1rem;}
+	h3 {font-size: .85rem;}
+	h4 {font-size: .8rem;}
+	h5 {font-size: .7rem;}
+	h6 {font-size: .6rem;}
 
 	.footer a {
 		padding: .6% 1.2%;
@@ -731,7 +731,7 @@ width:100%;
 	}
 	.pageTitle { /*page title should span entire screen and maybe not depentent on fontsize */
 		font-size: 1.6rem;
-		margin: 21px 0px 30px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
+		margin: 20px 0px 20px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
 
 	}
 
@@ -744,10 +744,10 @@ width:100%;
 
 	h1 {font-size: 1.5rem;	}
 	h2 {font-size: 1.3rem;	}
-	h3 {font-size: 1.4rem;	}
-	h4 {font-size: 1.55rem;	}
-	h5 {font-size: 1.5rem;	}
-	h6 {font-size: 1.35rem;	}
+	h3 {font-size: 1rem;	}
+	h4 {font-size: .9rem;	}
+	h5 {font-size: .8rem;	}
+	h6 {font-size: .7rem;	}
 }
 
 
@@ -762,11 +762,11 @@ width:100%;
 		/*  */	
 	
 		h1 {font-size: 1.7rem;	}
-		h2 {font-size: 1.6rem;	}
-		h3 {font-size: 1.5rem;	}
-		h4 {font-size: 1.5rem;	}
-		h5 {font-size: 1.5rem;	}
-		h6 {font-size: 1.45rem;	}
+		h2 {font-size: 1.5rem;	}
+		h3 {font-size: 1.3rem;	}
+		h4 {font-size: 1rem;	}
+		h5 {font-size: .9rem;	}
+		h6 {font-size: .8rem;	}
 		
 
 
