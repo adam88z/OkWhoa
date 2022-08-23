@@ -29,18 +29,18 @@ width:100%;height:40px;float:left;color:black;}
 html {
 	padding: 0px;
 	margin: 0 auto;
+	font-size: 100%;
 }
 
-body {		
+body {
 	padding: 0;
 	margin: 0;
-	font-size: .59rem;
-	font-family: 'Poppins', sans-serif;/**/
-	
+
+	font-family: 'Poppins', sans-serif; /**/
 	/*line-height:.5;setting line-height low fixes the gap under the banner image. Set it back to 1.2 on the sitecontainer*/
 	color: #5b3a1f; /*dark umber*/
 
-	background-color: #fcf9f7; 
+	background-color: #fcf9f7;
 	/*background-color: transparent;FCF8F3 desaturated umber lightened*/
 }
 
@@ -92,10 +92,11 @@ strong {
 }
 
 p {
-	line-height: 1.5;
-	margin: 0 0 12px 0;
+	font-size: .65rem;
+	line-height: 1.2;
+	margin: 0 0 6px 0;
 	padding-right: 5px;
-	padding-left: 1%;
+	padding-left: .5%;
 }
 hr {margin:0 0 10px 0;}
 
@@ -144,7 +145,7 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 /*	*/
 
 #sitecontent { /*sitecontent is the div that wraps around the contentplaceholder. sitecontentSplash will be used on the splash page*/
-	padding: 16px .1% 0% .1%; /* this was set to "33px 2% 0% 1.5%;" before. */
+	padding: 16px .025% 0% .025%; /* this was set to "33px 2% 0% 1.5%;" before. */
 	margin:0px auto;/* why 1px? 
 	margin-top:0px;*/
 	float: left;
@@ -247,31 +248,31 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 }*/
 
 .aboutMeFigureLeft {
-	width: 33%;
+	width: 45%;
 	/*clear:right;*/
 	float:left;
 	clear:left;
-	margin: 0% 2% 2% -12%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
+	margin: 1% 3% 3% 1%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
 }
 .aboutMeFigureRight {
-	width: 33%;
+	width: 45%;
 	float:right;
 	clear:right;/**/
-	margin:1% -18% 2% 2%;/*the negative margin allows the photo to occupy dead space under the navsub menu*/
+	margin:0% 2% 2% 1%;/* set negative left and right margins in the media queries */
 }
 .aboutMeClusterLeft {
-	width: 33%;
+	width: 45%;
 	/*clear:right;*/
 	float:left;
 	clear:left;
-	margin: 0% 2% 2% -16%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
+	margin: 0% 2% 2% 1%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
 }
 
 .aboutMeClusterRight {
-	width: 36%;
+	width: 45%;
 	float:right;
 	clear:right;/**/
-	margin:1% -18% 2% 2%;/*the negative margin allows the photo to occupy dead space under the navsub menu*/
+	margin:0% 2% 2% 1% ;/*set a negative margin yo allow the photo to occupy dead space under the navsub menu*/
 }
 
 /*.splashquotes {
@@ -511,7 +512,7 @@ width:100%;
 		float:right;		
 }
 #navmain a {
-		font-size:.6rem;
+		font-size:.63rem;
 		background-color:#fafafa; /**/
 		letter-spacing:-1px;/*this works. Great for small screen. Remember to turn this off in media query*/
 		line-height:1.2;/**/
@@ -520,7 +521,7 @@ width:100%;
 }
 
 #navsub a { /*the settings here are for the smallest screens (320px wide)*/
-		font-size:.6rem;
+		font-size:.63rem;
 		background-color:#fafafa; /**/
 		letter-spacing:-1px;/*this works. Great for small screen*/
 		color:red; /*this needs a complete cache clearing to see the red text s*/
@@ -646,8 +647,8 @@ width:100%;
 		/*body {font-size: .7rem;}*/
 		/*#navsub {width:14%;} #navsub should not appear on the default (splash) page */
 
-		#navsub a {font-size: .62rem; letter-spacing:normal;}
-	#navmain a {font-size: .62rem;letter-spacing: normal;
+		#navsub a {font-size: .66rem; letter-spacing:normal;}
+	#navmain a {font-size: .66rem;letter-spacing: normal;
 	}
 	#sitecontent {width: 86%;/* site content needs to stay wide on splash page. */
 		/*padding: 10px 0px 0px 10px;*/
@@ -657,7 +658,7 @@ width:100%;
 
 /* M E D I A  Q U E R Y  530 -------------------------------------------------------------------*/
 @media (min-width: 530px) {
-	body {font-size:.8rem;}
+	p {font-size:.8rem;}
 	#navmain a {font-size: .7rem; display:block; margin:12px 3px;}
 	#navmain {width:14%;} /*This effectively "turns on" the left menu. #sitecontent must be changed to reflect this change. */
 	#navsub {width: 14%;}
@@ -674,17 +675,23 @@ width:100%;
 	h6 {font-size: .5rem;}
 
 	.aboutMeFigureLeft {
-	width: 33%;
+	width: 49%;
 	/*clear:right;*/
 	float:left;
-	margin:0% 2% 2% -18%;/* this switches the photos to display in the menu column */
+	margin:0% 3% 3% -24%;/* setting a negative left margin moves the photos into the menu column. This assumes the column is empty */
 }
 .aboutMeFigureRight {
 	width: 33%;
 	/*clear:right;*/
-	margin:1% -18% 2% 2%;/*this allows the photo to occupy dead space under the navsub menu*/
+	margin:0% -24% 3% 3%;/*this allows the photo to occupy dead space under the navsub menu*/
 }
-}
+	.aboutMeClusterLeft {
+		margin: 0% 3% 3% -24%;
+	}
+	.aboutMeClusterRight {
+		margin: 0% -24% 3% 3%;
+	}
+
 
 
 
@@ -706,8 +713,8 @@ width:100%;
 		/*background-color: lightyellow;*/
 	}
 	.sitecontentSplash {width: 72% !important;}
+	p {font-size: .85rem;}
 
-	body {font-size: .75rem;}
 	h1 {font-size: 1.3rem;}
 	h2 {font-size: 1.2rem;}
 	h3 {font-size: 1.1rem;}
@@ -735,7 +742,6 @@ width:100%;
 	.carousel img {max-width: 1200px;}
 	.carousel-inner {background-color: transparent;}*/
 
-	body {font-size: .85em;}/*  */
 	h1 {font-size: 1.5rem;	}
 	h2 {font-size: 1.3rem;	}
 	h3 {font-size: 1.4rem;	}
@@ -754,7 +760,7 @@ width:100%;
 		#sitecontent {width: 70%;}
 		.sitecontentSplash {width: 72%;}
 		/*  */	
-		body {font-size: 1rem;line-height:1.3;}	
+	
 		h1 {font-size: 1.7rem;	}
 		h2 {font-size: 1.6rem;	}
 		h3 {font-size: 1.5rem;	}
