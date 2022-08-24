@@ -181,9 +181,6 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 
 
 
-
-
-
 #pageContent {
 	background-color: #fcfcfc;
 }
@@ -675,21 +672,23 @@ width:100%;
 	h6 {font-size: .5rem;}
 
 	.aboutMeFigureLeft {
-	width: 49%;
+	width: 40%;
 	/*clear:right;*/
 	float:left;
 	margin:0% 3% 3% -24%;/* setting a negative left margin moves the photos into the menu column. This assumes the column is empty */
 }
 .aboutMeFigureRight {
-	width: 33%;
+	width: 40%;
 	/*clear:right;*/
 	margin:0% -24% 3% 3%;/*this allows the photo to occupy dead space under the navsub menu*/
 }
 	.aboutMeClusterLeft {
 		margin: 0% 3% 3% -24%;
+		width: 40%;
 	}
 	.aboutMeClusterRight {
 		margin: 0% -24% 3% 3%;
+		width: 40%;
 	}
 
 
@@ -725,7 +724,7 @@ width:100%;
 	.footer a {
 		padding: .6% 1.2%;
 		margin: 0;
-		font-size: .6rem; /**/
+		font-size: .7rem; /**/
 		/*	.container {max-width: 720px;}
 	.carousel img {max-width: 768px;}*/
 	}
