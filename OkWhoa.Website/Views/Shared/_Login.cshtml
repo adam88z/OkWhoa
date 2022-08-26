@@ -20,6 +20,10 @@
             width: 50px;
             background-color: green;
         }
+        #loginContainer {
+            font-size:66%;
+            background-color: transparent;
+        }
 </style>
 <script>
     $(document).ready(function () {
@@ -33,56 +37,55 @@
 
 <div class="pageTitle">Login</div>
 
-<h1>Login</h1>
-
 <!--This is the DisplayTable. It's purpose is to plug the results from the Model into an html table.
     The Model is getting these user names from a database call.
 -->
-
-<div class="adam-modal">
-    <br />
-    <table class="table-condensed tblAddUsers ">
-        <thead>
-            <tr>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>Email</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><textarea id="txtFirstName"></textarea></td>
-                <td><textarea id="txtLastName"></textarea></td>
-                <td><textarea id="txtEmail"></textarea></td>
-                <td><button class="glyphicon glyphicon-plus" id="btnSendData">Add</button></td>
-            </tr>
-        </tbody>
-    </table>
-    <br />
-    <table class="table tblDisplayUsers">
-        <thead>
-            <tr>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>Email</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @foreach (var user in Model.Users)
-            {
+<div id="loginContainer">
+    <div class="adam-modal">
+        <br />
+        <table class="table-condensed tblAddUsers ">
+            <thead>
                 <tr>
-                    <td>@user.FirstName</td>
-                    <td>@user.LastName</td>
-                    <td>@user.Email</td>
-                    <td><button id="@user.ID" class="glyphicon glyphicon-remove" onclick="deleteUser(this)"></button></td>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th></th>
                 </tr>
-            }
+            </thead>
+            <tbody>
+                <tr>
+                    <td><textarea id="txtFirstName"></textarea></td>
+                    <td><textarea id="txtLastName"></textarea></td>
+                    <td><textarea id="txtEmail"></textarea></td>
+                    <td><button class="glyphicon glyphicon-plus" id="btnSendData">Add</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <table class="table tblDisplayUsers">
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
 
-        </tbody>
-    </table>
+                @foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td>@user.FirstName</td>
+                        <td>@user.LastName</td>
+                        <td>@user.Email</td>
+                        <td><button id="@user.ID" class="glyphicon glyphicon-remove" onclick="deleteUser(this)"></button></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <script>
