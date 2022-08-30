@@ -75,15 +75,15 @@ h6 {font-size: .4rem;}
 a img {border:none;}/* ??? */
 
 ul {
-	margin-left: 3%;
+	margin-left: 1.5%;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
 
 li {
+	font-size:.7rem;
 	margin-left: 1.5%;
-	margin-bottom: 0.8em; /* why is this set this way? */
-	margin-bottom: 1em; /* why is this set this way? */
+
 }
 
 strong {
@@ -92,7 +92,7 @@ strong {
 }
 
 p {
-	font-size: .65rem;
+	font-size: .7rem;
 	line-height: 1.2;
 	margin: 0 0 6px 0;
 	padding-right: 5px;
@@ -145,7 +145,7 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 /*	*/
 
 #sitecontent { /*sitecontent is the div that wraps around the contentplaceholder. sitecontentSplash will be used on the splash page*/
-	padding: 8px .025% 0% .025%; /* this was set to "33px 2% 0% 1.5%;" before. */
+	padding: 8px 1% 0% 10px; /* this was set to "33px 2% 0% 1.5%;" before. */
 	margin:0px auto;/* why 1px? 
 	margin-top:0px;*/
 	float: left;
@@ -182,7 +182,7 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 
 
 #pageContent {
-	background-color: #fcfcfc;
+	background-color: #fc0000; /*don't think this is used anywhere*/
 }
 
 .masterBanner {/* this is the class applied to IMGs in the header*/
@@ -484,7 +484,7 @@ width:100%;
 		display: inline-block;
 		padding:.7% 1.2%;	
 		margin:.1% .5% 1% .5%;
-		font-size:.7rem;/**/
+		font-size:.65rem;/**/
 	}
 
 
@@ -500,37 +500,37 @@ width:100%;
 	}
 #navmain {			
 		width:100%; /*this is needed here to make the main menu display across top of screen at small sizes */
-		padding:5px 3px;
+		padding:5px 1px;
 		float:left;
 	}
 #navsub {
-		width:14%;
-		padding:5px 3px;
+		width:16%;
+		padding:5px 1px;
 		float:right;		
 }
 #navmain a {
-		font-size:.63rem;
+		font-size:.62rem;
 		background-color:#fafafa; /**/
 		letter-spacing:-1px;/*this works. Great for small screen. Remember to turn this off in media query*/
 		line-height:1.2;/**/
-		padding:4px 3px;
+		padding:4px 2px;
 		margin:6px 0px;/* at small screen sizes the margin needs to be set in pixels*/
 }
 
 #navsub a { /*the settings here are for the smallest screens (320px wide)*/
-		font-size:.63rem;
-		background-color:#fafafa; /**/
-		letter-spacing:-1px;/*this works. Great for small screen*/
 		color:red; /*this needs a complete cache clearing to see the red text s*/
+		font-size:.62rem;
+		background-color:#fafafa; /**/
+		letter-spacing:-1px;/*this works. Great for small screen*/		
 		line-height:1.2;
 		display: block;/*this is needed to make the buttons stack vertically*/
-		padding:4px;/* for smallest screens this needs to be very low */
+		padding:4px 2px;/* for smallest screens this needs to be very low */
 		margin:6px 0px; /* for smallest screens these need to be very low */
 		text-align:center;	
 }
 
 #navmain a:link {/*  */
-		color: green;/**/
+		color: green;/* this only happens when the browser is completely purged */
 		text-decoration: none;
 		border: 1px solid #666666;
 		border-radius:6px;/**/
@@ -647,7 +647,7 @@ width:100%;
 		#navsub a {font-size: .66rem; letter-spacing:normal;}
 	#navmain a {font-size: .66rem;letter-spacing: normal;
 	}
-	#sitecontent {width: 86%;/* site content needs to stay wide on splash page. */
+	#sitecontent {width: 84%;/* site content needs to stay wide on splash page. */
 		/*padding: 10px 0px 0px 10px;*/
 		
 	}
@@ -656,10 +656,10 @@ width:100%;
 /* M E D I A  Q U E R Y  530 -------------------------------------------------------------------*/
 @media (min-width: 530px) {
 	p {font-size:.8rem;}
-	#navmain a {font-size: .7rem; display:block; margin:12px 3px;}
+	#navmain a {font-size: .75rem; display:block; margin:12px 3px;}
 	#navmain {width:14%;} /*This effectively "turns on" the left menu. #sitecontent must be changed to reflect this change. */
 	#navsub {width: 14%;}
-	#navsub a {font-size: .7rem;display: block;margin: 12px 3px;letter-spacing:normal;}
+	#navsub a {font-size: .75rem;display: block;margin: 12px 3px;letter-spacing:normal;}
 	#sitecontent {width: 72%;
 	padding: 1% 3% 1% 3%;}/* this creates room for the left navmain column to appear to the left instead of at the top.*/
 
@@ -704,15 +704,15 @@ width:100%;
 		}
 
 	#navsub {width:14%;}
-	#navmain a {font-size: .7rem;display:block;letter-spacing:normal;}
-	#navsub a {font-size: .7rem;}
+	#navmain a {font-size: .76rem;display:block;letter-spacing:normal;}
+	#navsub a {font-size: .76rem;}
 	#sitecontent {
 		width: 72%;
 		padding: 2% 3% 2% 3%; /* this allows both navmain and navsub navigation menus on all pages (except for the splash page) */
 		/*background-color: lightyellow;*/
 	}
 	.sitecontentSplash {width: 72% !important;}
-	p {font-size: .85rem;}
+	p {font-size: .9rem;}
 
 	h1 {font-size: 1.3rem;}
 	h2 {font-size: 1.1rem;}
