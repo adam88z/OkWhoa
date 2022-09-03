@@ -113,6 +113,14 @@ namespace OkWhoa.Website.Controllers
 
             return PartialView("_MilitaryService");
         }
+
+
+        public ActionResult AboutMeCats()
+        {
+            ViewBag.Message = "Cats";
+
+            return PartialView("_AboutMeCats");
+        }
         public ActionResult Music()
         {
             ViewBag.Message = "Music page.";

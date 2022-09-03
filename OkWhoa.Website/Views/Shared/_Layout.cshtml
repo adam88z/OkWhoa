@@ -177,9 +177,11 @@
 
     @*The structure of the site is:
         #sitecontainer,   -- wraps around everything
-        #navmain          -- Displays either across the top or to the left depending on screen width as set in media queriess
-        #sitecontent      -- The views are rendered inside of #sitecontent.
-        #navsub           -- Depending on what main menu item you have clicked, a submenu appears and other submenus supressed.
+        #sitecontent opens
+        #navmain          -- Displays across the top or left depending on screen width as set in media queriess
+        #navsub           -- Click main menu item, a submenu appears and other submenus are supressed.
+        Render Body
+        #sitecontent      -- closes
         #footer           -- footer is outside everything  *@
 
     @*  The widths of navmain, sitecontent, and navsub should all add up to 100%.
@@ -192,60 +194,64 @@
                 <img id="innerModalImage" src="" alt="" style="" />
             </div>
         </div>
-
-
-        @*  #navmain   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*@
-    <div id="navmain" class="clearfix">
-        @Html.ActionLink("Home", "Index", "Home")
-        @Html.ActionLink("About Me", "AboutMe", "Home")
-        @Html.ActionLink("Experience", "Experience", "Home")
-        @Html.ActionLink("Design", "Design", "Home")
-        @Html.ActionLink("Photography", "Photography", "Home")
-        @Html.ActionLink("Login", "Login", "Home")
-    </div>
-
-        @*  #sitecontent  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*@
-
         <div id="sitecontent" class="clearfix">
+
+
+            @*  #navmain   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*@
+            <div id="navmain" class="clearfix">
+                @Html.ActionLink("Home", "Index", "Home")
+                @Html.ActionLink("About Me", "AboutMe", "Home")
+                @Html.ActionLink("Experience", "Experience", "Home")
+                @Html.ActionLink("Design", "Design", "Home")
+                @Html.ActionLink("Photography", "Photography", "Home")
+                @Html.ActionLink("Login", "Login", "Home")
+            </div>
+
+
+
+
+            @*   #navsub   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*@
+            <div id="navsub" class="clearfix">
+                @* #navsub contains the submenus.
+                    These submenus are hidden on the _Layout page and unhidden on the individul pages using Javascript.
+                    These started out as User Controls in an earlier project which is why the class names have the "uc" prefix. *@
+
+                <div id="ucAboutMe" class="hidden">
+                    @Html.ActionLink("Trees", "Trees", "Home")
+                    @Html.ActionLink("Cats", "AboutMeCats", "Home")
+                    @Html.ActionLink("Music", "Music", "Home")
+                    @Html.ActionLink("Video", "Video", "Home")
+                    @Html.ActionLink("Home Improvement", "homeImprovement", "Home")
+                    @Html.ActionLink("My Backyard", "MyBackyard", "Home")
+                    @Html.ActionLink("Military Service", "MilitaryService", "Home")
+                    @*@Html.ActionLink("Yoink", "Yoink", "Home")*@
+                    <p style="font-size:.75rem;">Click on any image to see it magnified. Click off of the image to restore.</p>
+                </div>
+
+                <div id="ucMenuDesign" class="hidden">
+                    @Html.ActionLink("Print", "DesignPrint", "Home")
+                    @Html.ActionLink("Banners", "DesignBanners", "Home")
+                    @Html.ActionLink("Websites", "DesignWebsites", "Home")
+                </div>
+
+                <div id="ucMenuExperience" class="hidden">
+                    @Html.ActionLink("Rolls Royce", "ExperienceRollsRoyce", "Home")
+                    @Html.ActionLink("ASCE", "ExperienceASCE", "Home")
+                    @Html.ActionLink("Keystone", "ExperienceKeystone", "Home")
+                    @Html.ActionLink("BHP", "ExperienceBHP", "Home")
+                    @Html.ActionLink("UPMC", "ExperienceUPMC", "Home")
+                    @Html.ActionLink("Pitt", "ExperiencePitt", "Home")
+                    @Html.ActionLink("HTA", "ExperienceHTA", "Home")
+                    @Html.ActionLink("Interior Energy", "ExperienceInterior", "Home")
+                    @Html.ActionLink("USAF", "ExperienceUSAF", "Home")
+                </div>
+            </div>
+
             @RenderBody()
             @* Think of @RenderBody as ContentPlaceholder for Views. *@
-        </div>
 
+        </div> @*  end #sitecontent  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*@
 
-        @*   #navsub   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*@
-        <div id="navsub" class="clearfix">
-            @* #navsub contains the submenus.
-                These submenus are hidden on the _Layout page and unhidden on the individul pages using Javascript.
-                These started out as User Controls in an earlier project which is why the class names have the "uc" prefix. *@
-
-            <div id="ucAboutMe" class="hidden">
-                @Html.ActionLink("Trees", "Trees", "Home")
-                @Html.ActionLink("Music", "Music", "Home")
-                @Html.ActionLink("Video", "Video", "Home")
-                @Html.ActionLink("Home Improvement", "homeImprovement", "Home")
-                @Html.ActionLink("My Backyard", "MyBackyard", "Home")
-                @Html.ActionLink("Military Service", "MilitaryService", "Home")
-                @*@Html.ActionLink("Yoink", "Yoink", "Home")*@
-            </div>
-
-            <div id="ucMenuDesign" class="hidden">
-                @Html.ActionLink("Print", "DesignPrint", "Home")
-                @Html.ActionLink("Banners", "DesignBanners", "Home")
-                @Html.ActionLink("Websites", "DesignWebsites", "Home")
-            </div>
-
-            <div id="ucMenuExperience" class="hidden">
-                @Html.ActionLink("Rolls Royce", "ExperienceRollsRoyce", "Home")
-                @Html.ActionLink("ASCE", "ExperienceASCE", "Home")
-                @Html.ActionLink("Keystone", "ExperienceKeystone", "Home")
-                @Html.ActionLink("BHP", "ExperienceBHP", "Home")
-                @Html.ActionLink("UPMC", "ExperienceUPMC", "Home")
-                @Html.ActionLink("Pitt", "ExperiencePitt", "Home")
-                @Html.ActionLink("HTA", "ExperienceHTA", "Home")
-                @Html.ActionLink("Interior Energy", "ExperienceInterior", "Home")
-                @Html.ActionLink("USAF", "ExperienceUSAF", "Home")
-            </div>
-        </div>
     </div><!-- end .sitecontainer -->
 
 
@@ -267,6 +273,7 @@
 
 
 </body>
+
 </html>
 
 
