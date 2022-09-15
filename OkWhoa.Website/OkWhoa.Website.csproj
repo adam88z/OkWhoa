@@ -936,6 +936,7 @@
   <ItemGroup>
     <Folder Include="aboutme\_notes\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Content\images\aboutme\Music\" />
     <Folder Include="Content\images\aboutme\_notes\" />
     <Folder Include="Content\images\design\_notes\" />
     <Folder Include="Content\images\experience\portraits\large\_notes\" />

@@ -158,11 +158,9 @@ background-color:orange;
 	float: left;
 	position: relative;*/
 	background-color: #222222;
-	width: 100%; /*allows photos to fill the whole viewport */
-	
+	width: 100%; /*allows photos to fill the whole viewport */	
 }
-.sitecontentSplash {
-		
+.sitecontentSplash {		
 	background-image: url(../Content/images/layout/BA2C3405_knockout_1301.png);
 	background-repeat: no-repeat;
 	background-position: 130% 100%;
@@ -170,102 +168,81 @@ background-color:orange;
 	height:100%;
 	min-height: 400px;
 }
-
-
-
 #pageContent {
 	background-color: #fc0000; /*don't think this is used anywhere*/
 }
-
 .masterBanner {/* this is the class applied to IMGs in the header*/
 	width: 100%;
 	max-height:300px;
 }
-#header {	
-				 
-					 background-image:url("../images/pagebanners/Fresh_horiz_10_3000X200.jpg");/**/
-					 height:auto;
-					 background-size:contain;
-					 background-size:auto;
-					 background-repeat:no-repeat;
-					 border:1px red solid; 
-					 /*height:90px;
-					 height:auto;
-					 height:90%;
-					 background-color: yellow;  */
+#header {					 
+	background-image:url("../images/pagebanners/Fresh_horiz_10_3000X200.jpg");/**/
+	height:auto;
+	background-size:contain;
+	background-size:auto;
+	background-repeat:no-repeat;
+	border:1px red solid; 
 }
-
-
 .experienceLogo {
-   float:left; 
-	 margin: 1% 4% 2% 1%;
-	 padding: 2% 4% 2% 2%;
-	 border-radius:2%;
-   width:15%;
-   
-	  box-shadow:3px 4px 5px hsla(3,10%,30%,8);/*heavy and dark*/
-		box-shadow:2px 2px 2px hsla(3,90%,30%,.1);
-		clear:left;/**/
+    float:left; 
+	margin: 1% 4% 2% 1%;
+	padding: 2% 4% 2% 2%;
+	border-radius:2%;
+    width:15%;
+	/*box-shadow:3px 4px 5px hsla(3,10%,30%,8);heavy and dark*/
+	box-shadow:2px 2px 2px hsla(3,90%,30%,.1);
+	clear:left;/**/
 }
 .experienceLogoRight {
 	float: right;
-	clear:left;
-	width:15%;
-	margin: -2% 3% 2% 1%;
-	/*border:1px solid red;*/
+	width:20%;
+	margin: 1% 2% 2% 1%;
+	border:1px solid red;/**/
 }
-
 .experienceFigure {
 	width: 33%;
 	/*clear:right;*/
 	margin:1% 3% 2% 2%;
 }
-
 .aboutMeFigureLeft {
-	width: 18%;
-	/*clear:right;	clear:left;*/
+	width: 33%;
 	float:left;
 	margin: 1% 2% 1% .5%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
 }
 .aboutMeFigureRight {
-	width: 18%;
+	width: 33%;
 	float:right;
-	/*clear:right;*/
-	margin:1% 0.5% 1% 1.5%;/* set negative left and right margins in the media queries */
+	margin:1% 0.5% 1% 1.5%;
 }
+/*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeClusterLeft {
 	width: 33%;
-	/*clear:right;clear:left;*/
 	float:left;
 	margin: 0% 2% 2% 1%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
 }
 .aboutMeClusterLeft img {width:50%;float:left;}
-
-	.aboutMeClusterRight {
-		width: 33%;
-		float: right;
-		/*clear:right;*/
-		margin: 0% 1% 2% 2%; /*set a negative margin yo allow the photo to occupy dead space under the navsub menu*/
-	}
+/*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
+.aboutMeClusterRight {
+	width: 33%;
+	float: right;
+	margin: 0% 1% 2% 2%; 
+}
 .aboutMeClusterRight img {width: 50%;float: Right;}
-
+/*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeStackRight {
 	width: 33%;
 	float: right;
-	/*clear:right;*/
-	margin: 0% 1% 2% 2%; /*set a negative margin yo allow the photo to occupy dead space under the navsub menu*/
+	margin: 0% 1% 2% 2%; 
 }
-
 .aboutMeStackRight img {width: 100%;float: left;}
-
+/*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeStackLeft {
 	width: 33%;
-	float: right;
-	/*clear:right;*/
-	margin: 0% 1% 2% 2%; /*set a negative margin yo allow the photo to occupy dead space under the navsub menu*/
+	float: left;
+	margin: 0% 1% 2% 2%; 
 }
-
 .aboutMeStackLeft img {width: 100%;float: left;}
+/*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 
 #slideshow {
 	height:180px; /* Set in main style sheet - overidden here ???? */
@@ -411,15 +388,14 @@ width:100%;
   animation-direction: alternate;
   animation-fill-mode: forwards;
   /*animation-iteration-count: 2;
-  animation-delay: .3s;*/ 
-	
-	 
-} 
-	/* -------------------------------------------------------------------------------------------------------------------*/
-	/* -------------------------------------------------------------------------------------------------------------------*/
-	/* -------------------------------------------------------------------------------------------------------------------*/
-	/* Navigation (for smallest screens)*/
-	/* -------------------------------------------------------------------------------------------------------------------*/
+  animation-delay: .3s;*/ 	 
+}
+/*   ##########################################################################################  */
+/*   ##########################################################################################  */
+/*   ##########################################################################################  */
+/*   ##########################################################################################  */
+/*   ##########################################################################################  */
+/*   ##########################################################################################  */
 .submenuTitle {
 	text-align: center;
 	margin-bottom:10px;
@@ -428,32 +404,32 @@ width:100%;
 	display:none;
 }
 .footer {
-		/*background-image:url(../images/layout/pixels.jpg);background-repeat:repeat-y;
-		padding-left:10%;*/
-		height:30px;
-		/*max-width:1200px;*/
-		margin:0 auto;
-		text-align:center;	
-		width:100%;
-		float:left;/* floating the fooer left keeps it fromfalling into the space where the submenu goes */
-		/*background-color:yellow;*/
-	}
+	/*background-image:url(../images/layout/pixels.jpg);background-repeat:repeat-y;
+	padding-left:10%;*/
+	height:30px;
+	/*max-width:1200px;*/
+	margin:0 auto;
+	text-align:center;	
+	width:100%;
+	float:left;/* floating the fooer left keeps it fromfalling into the space where the submenu goes */
+	/*background-color:yellow;*/
+}
 .footer a {
-		display: inline-block;
-		padding:.7% 1.2%;	
-		margin:.1% .5% 1% .5%;
-		font-size:.65rem;/**/
-	}
+	display: inline-block;
+	padding:.7% 1.2%;	
+	margin:.1% .5% 1% .5%;
+	font-size:.65rem;/**/
+}
 
 
 /* NAVIGATION ------------------------------------------------------------------------------------------------- */
 
 #navmain, #navsub {
-		font-family: 'Lexend Giga', sans-serif;
-		font-weight:400;
-		display:block; /* On smallest devices the menu should be horizontal across the top. Larger screens vertical left column*/
-		background-color:#efefef; 		
-	}
+	font-family: 'Lexend Giga', sans-serif;
+	font-weight:400;
+	display:block; /* On smallest devices the menu should be horizontal across the top. Larger screens vertical left column*/
+	background-color:#f8f8f8; 		
+}
 #navmain {
 	width: 100%; /*this is needed here to make the main menu display across top of screen at small sizes */
 	padding: 6px 0px;
@@ -469,89 +445,87 @@ width:100%;
 	border-radius: 0 0 0 12px;
 }
 #navmain a {
-		font-size:.62rem;
-		background-color:#fafafa; /**/
-		letter-spacing:-1px;/*this works. Great for small screen. Remember to turn this off in media query*/
-		line-height:1.2;/**/
-		padding:3px 1px;
-		margin:6px 0px;/* at small screen sizes the margin needs to be set in pixels*/
+	font-size:.62rem;
+	background-color:#fdfdfd; /**/
+	letter-spacing:-1px;/*this works. Great for small screen. Remember to turn this off in media query*/
+	line-height:1.2;/**/
+	padding:3px 1px;
+	margin:6px 0px;/* at small screen sizes the margin needs to be set in pixels*/
 }
 
 #navsub a { /*the settings here are for the smallest screens (320px wide)*/
-		color:red; /*this needs a complete cache clearing to see the red text s*/
-		font-size:.62rem;
-		background-color:#fafafa; /**/
-		letter-spacing:-1px;/*this works. Great for small screen*/		
-		line-height:1.2;
-		display: block;/*this is needed to make the buttons stack vertically*/
-		padding:4px 1px;/* for smallest screens this needs to be very low */
-		margin:6px 0px; /* for smallest screens these need to be very low */
-		text-align:center;	
+	color:red; /*this needs a complete cache clearing to see the red text s*/
+	font-size:.62rem;
+	background-color:#fafafa; /**/
+	letter-spacing:-1px;/*this works. Great for small screen*/		
+	line-height:1.2;
+	display: block;/*this is needed to make the buttons stack vertically*/
+	padding:4px 1px;/* for smallest screens this needs to be very low */
+	margin:6px 0px; /* for smallest screens these need to be very low */
+	text-align:center;	
 }
 
 #navmain a:link {/*  */
-		color: green;/* this only happens when the browser is completely purged */
-		text-decoration: none;
-		border: 1px solid #666666;
-		border-radius:6px;/**/
-		border-top-color:#efefef;
-		border-right-color:#dedede;
-		border-bottom-color:#cccccc;
-		border-left-color:#dddddd;
+	color: green;/* this only happens when the browser is completely purged */
+	text-decoration: none;
+	border: 1px solid #666666;
+	border-radius:6px;/**/
+	border-top-color:#efefef;
+	border-right-color:#dedede;
+	border-bottom-color:#cccccc;
+	border-left-color:#dddddd;
 }
 #navmain a:visited {
-		color:orange;
-				color: #478ad6;/* this is a good color */
-		border: 1px solid #666666;
-		/*border-radius:6px;*/
-		border-top-color:#ffffff;
-		border-right-color:#dddddd;
-		border-bottom-color:#cccccc;
-		border-left-color:#eeeeee;
+	color:orange;
+	color: #478ad6;/* this is a good color */
+	border: 1px solid #666666;
+	/*border-radius:6px;*/
+	border-top-color:#ffffff;
+	border-right-color:#dddddd;
+	border-bottom-color:#cccccc;
+	border-left-color:#eeeeee;
 
 }
 #navmain a:hover, a:active, a:focus {/* this is the class that appears by default */
-		/*color: #5378D9;*/
-		color:#6a99d1;
-		background-color:#e9e9e9;
-		border: 1px solid #666666;
-		border-radius:6px;/**/
-		border-top-color:#cecece;
-		border-right-color:#cccccc;
-		border-bottom-color:#dddddd;
-		border-left-color:#bebebe;
+	/*color: #5378D9;*/
+	color:#6a99d1;
+	background-color:#e9e9e9;
+	border: 1px solid #666666;
+	border-radius:6px;/**/
+	border-top-color:#cecece;
+	border-right-color:#cccccc;
+	border-bottom-color:#dddddd;
+	border-left-color:#bebebe;
 }
 #navsub a:link {
-		color: red;
-		text-decoration: none;
-		border: 1px solid #666666;
-		border-radius: 6px;/**/
-		border-top-color: #ffffff;
-		border-right-color: #eeeeee;
-		border-bottom-color: #cccccc;
-		border-left-color: #dddddd;
+	color: red;
+	text-decoration: none;
+	border: 1px solid #666666;
+	border-radius: 6px;/**/
+	border-top-color: #ffffff;
+	border-right-color: #eeeeee;
+	border-bottom-color: #cccccc;
+	border-left-color: #dddddd;
 }
 #navsub a:visited {
-		color: #3969b8; /* this color came from Kuler */
-		border: 1px solid black;
-		border-radius:6px;/**/
-		border-top-color:#ffffff;
-		border-right-color:#dddddd;
-		border-bottom-color:#cccccc;
-		border-left-color:#eeeeee;
-				
+	color: #3969b8; /* this color came from Kuler */
+	border: 1px solid black;
+	border-radius:6px;/**/
+	border-top-color:#ffffff;
+	border-right-color:#dddddd;
+	border-bottom-color:#cccccc;
+	border-left-color:#eeeeee;
 }
 #navsub a:hover, a:active, a:focus {
-
-		text-decoration: none;
-		color:#3a8bdb;/* this came from Kuler */
-		border: 1px solid #666666;
-		border-radius:6px;/**/
-		border-top-color:#cecece;
-		border-right-color:#cccccc;
-		border-bottom-color:#dddddd;
-		border-left-color:#bebebe;
-		background-color:#e9e9e9; /* test */
+	text-decoration: none;
+	color:#3a8bdb;/* this came from Kuler */
+	border: 1px solid #666666;
+	border-radius:6px;/**/
+	border-top-color:#cecece;
+	border-right-color:#cccccc;
+	border-bottom-color:#dddddd;
+	border-left-color:#bebebe;
+	background-color:#e9e9e9; /* test */
 }
 
 .tblAddUsers {
@@ -616,8 +590,9 @@ width:100%;
 /* M E D I A  Q U E R Y  530 -------------------------------------------------------------------*/
 @media (min-width: 530px) {
 	p {font-size:.85rem;}
-	#navmain a {font-size: .75rem; display:block; margin:12px 3px;}
+	
 	#navmain {width:14%;} /*This effectively "turns on" the left menu. #sitecontent must be changed to reflect this change. */
+	#navmain a {font-size: .75rem; display:block; margin:12px 3px;}
 	#navsub {width: 16%;}
 	#navsub a {font-size: .75rem;display: block;margin: 12px 3px;letter-spacing:normal;}
 	#sitecontent {width: 100%;padding: 0;}/* this is essentially unused now..*/
@@ -635,18 +610,17 @@ width:100%;
 		margin: 0px 0px 5px 0px; /*-33 margin lets the page title sit in the area above sitecontent*/
 		padding-top: 2%;
 	}
-
 	.aboutMeFigureLeft {
-	width: 24%;
-	/*clear:right;*/
-	float:left;
-	margin:0% 3% 3% 1%;/* setting a negative left margin moves the photos into the menu column. This assumes the column is empty */
-}
-.aboutMeFigureRight {
-	width: 24%;
-	/*clear:right;*/
-	margin:1% 3% 3% 3%;/*this allows the photo to occupy dead space under the navsub menu*/
-}
+		width: 24%;
+		/*clear:right;*/
+		float:left;
+		margin:0% 3% 3% 1%;/* setting a negative left margin moves the photos into the menu column. This assumes the column is empty */
+	}
+	.aboutMeFigureRight {
+		width: 24%;
+		/*clear:right;*/
+		margin:1% 3% 3% 3%;/*this allows the photo to occupy dead space under the navsub menu*/
+	}
 	.aboutMeClusterLeft {
 		margin: 0% 3% 3% 1.5%;
 		width: 36%;
@@ -657,26 +631,17 @@ width:100%;
 	}
 
 
-
-
 /* M E D I A  Q U E R Y  768 -------------------------------------------------------------------*/
 @media (min-width: 768px) {
-
 	#navmain {
-			padding-left: .5%;
-			padding-right: .5%;
-			width:12%;
+		padding-left: .5%;
+		padding-right: .5%;
+		width:12%;
 		}
-
 	#navsub {width:14%;}
 	#navmain a {font-size: .76rem;display:block;letter-spacing:normal;}
 	#navsub a {font-size: .76rem;}
-	#sitecontent {
-		/*width: 72%;
-		padding: 2% 3% 2% 3%;  this allows both navmain and navsub navigation menus on all pages (except for the splash page) */
-		/*background-color: lightyellow;*/
-	}
-	
+	#sitecontent {}	
 	p {font-size: .9rem;}
 
 	h1 {font-size: 1.3rem;}
@@ -690,11 +655,7 @@ width:100%;
 		padding: .6% 1.2%;
 		margin: 0;
 		font-size: .7rem; /**/
-		/*	.container {max-width: 720px;}
-	.carousel img {max-width: 768px;}*/
 	}
-
-
 
 /* M E D I A  Q U E R Y  -------------------------------------------------------------------*/
 @media (min-width: 992px) {
