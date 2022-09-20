@@ -54,11 +54,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {font-size: 1.1rem;margin-top: 1.5%;}
-h2 {font-size: .9rem;}
-h3 {font-size: .8rem;}
-h4 {font-size: .6rem;}
-h5 {font-size: .5rem;}
-h6 {font-size: .4rem;}
+h2 {font-size: .95rem;}
+h3 {font-size: .9rem;}
+h4 {font-size: .8rem;}
+h5 {font-size: .75rem;}
+h6 {font-size: .7rem;}
 
 .pageTitle { /*page title should span entire screen and maybe not be dependent on fontsize */
 	font-size: 1.05rem;
@@ -93,7 +93,7 @@ strong {
 p {
 	font-size: .8rem;
 	line-height: 1.5;
-	margin: 1.5% 0 0 1.5%;
+	margin: 1.5% 0 0 3%;
 	padding-right: 3%;
 	padding-left: 0;
 }
@@ -428,25 +428,25 @@ width:100%;
 	font-family: 'Lexend Giga', sans-serif;
 	font-weight:400;
 	display:block; /* On smallest devices the menu should be horizontal across the top. Larger screens vertical left column*/
-	background-color:#f8f8f8; 		
+	background-color:#f4f4f4; 		
 }
 #navmain {
 	width: 100%; /*this is needed here to make the main menu display across top of screen at small sizes */
-	padding: 6px 0px;
-	margin: 0% 1.5% 1% 0%;
+	padding: 8px 0px;
+	margin: 0% 2% 0% 0%;
 	float: left;
 	border-radius: 0 0 0 0;/* at this point the menu is wide and doesn't need a rounded border*/
 }
 #navsub {
 	width: 16%;
-	padding: 25px 1px;
+	padding: 8px 1px;
 	margin: 0%  0% 1% 1.5%;
 	float: right;
 	border-radius: 0 0 0 12px;
 }
 #navmain a {
 	font-size:.62rem;
-	background-color:#fdfdfd; /**/
+	background-color:#fafafa; /**/
 	letter-spacing:-1px;/*this works. Great for small screen. Remember to turn this off in media query*/
 	line-height:1.2;/**/
 	padding:3px 1px;
@@ -589,9 +589,9 @@ width:100%;
 
 /* M E D I A  Q U E R Y  530 -------------------------------------------------------------------*/
 @media (min-width: 530px) {
-	p {font-size:.85rem;}
+	p {font-size:.9rem;}
 	
-	#navmain {width:14%;} /*This effectively "turns on" the left menu. #sitecontent must be changed to reflect this change. */
+	#navmain {width:14%;border-bottom-right-radius:16px;} /*This effectively "turns on" the left menu. #sitecontent must be changed to reflect this change. */
 	#navmain a {font-size: .75rem; display:block; margin:12px 3px;}
 	#navsub {width: 16%;}
 	#navsub a {font-size: .75rem;display: block;margin: 12px 3px;letter-spacing:normal;}
@@ -642,7 +642,7 @@ width:100%;
 	#navmain a {font-size: .76rem;display:block;letter-spacing:normal;}
 	#navsub a {font-size: .76rem;}
 	#sitecontent {}	
-	p {font-size: .9rem;}
+	p {font-size: .95rem;}
 
 	h1 {font-size: 1.3rem;}
 	h2 {font-size: 1.1rem;}
