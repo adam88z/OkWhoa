@@ -36,13 +36,13 @@ namespace OkWhoa.Website.Controllers
         {
             ViewBag.Message = "Your Design page.";
 
-            return PartialView("_Design");
+            return PartialView("_DesignWebsites");
         }
         public ActionResult Experience()
         {
             ViewBag.Message = "Your Experience page.";
 
-            return PartialView("_Experience");
+            return PartialView("_ExperienceRollsRoyce");
         }
         public ActionResult AboutMe()
         {

@@ -41,7 +41,13 @@ body {
 	background-color: #fcf9f7;
 	/*background-color: transparent;FCF8F3 desaturated umber lightened*/
 }
-
+#videoColumn {
+	width:100%;/* initially this width should be 100% to accomodate smallest screens */
+	float:left;
+	/*margin:0 auto;*/
+	padding-left:1%;
+}
+iframe {width:290px;height:145px;}
 
 h1, h2, h3, h4, h5, h6 {
 	color: #316065;
@@ -597,7 +603,8 @@ width:100%;
 	/* -------------------------------------------------------------------------------------------------------------------*/
 	/* -------------------------------------------------------------------------------------------------------------------*/
 	/* M E D I A  Q U E R Y  333 --------- this is the first "bump up" from the smallest screen size ---------------------------*/
-	@media (min-width: 333px) { /*this used to be  420 */
+
+@media (min-width: 333px) { /*this used to be  420 */
 		/*.container {max-width: 540px;}
 	.carousel img {width:100%;min-width:600px;max-width:600px;height:100%!important;}*/
 		/*body {font-size: .7rem;}*/
@@ -610,6 +617,17 @@ width:100%;
 		/*padding: 10px 0px 0px 10px;*/
 		
 	}
+		#videoColumn {
+			width: 50%; /* initially this width should be 100% to accomodate smallest screens */
+		float: left;
+			padding-left: 2%;
+		}
+
+		iframe {
+			width: 160px;
+			height: 90px;
+			margin: 0 auto;
+		}
 }
 
 /* M E D I A  Q U E R Y  530 -------------------------------------------------------------------*/
@@ -662,9 +680,23 @@ width:100%;
 		margin: 0% 2% 2% 2%;
 	}
 
+	#videoColumn {
+		width: 50%; /* initially this width should be 100% to accomodate smallest screens */
+		float: left;
+		padding-left: 2%;
+	}
+	iframe {
+		width: 300px;
+		height: 125px;
+		margin: 0 auto;
+	}
 
 /* M E D I A  Q U E R Y  768 -------------------------------------------------------------------*/
 @media (min-width: 768px) {
+	iframe {
+		width: 350px;
+		height: 175px;
+	}
 	#navmain {
 		padding-left: .5%;
 		padding-right: .5%;
