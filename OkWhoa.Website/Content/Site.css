@@ -2,7 +2,7 @@
 
 
 /*	Everything here, at the top of the stylesheet is optimized for the smallest screens.
-	Styles for larger screens are set in the media queries, which are quite large. 
+	Styles for larger screens are set in the media queries. This is a novel way of building a stylesheet and it takes some getting used to. 
 	In the media queries is where everything is set to look good on larger screens. 
 	So, if these styles seem weird, that's why. */
 	 
@@ -94,7 +94,7 @@ strong {
 }
 
 p {
-	font-size: .8rem;
+	font-size: .9rem;
 	line-height: 1.5;
 	margin: .1% .3% 1.2% 1.5%;
 	padding-right: 3%;
@@ -218,42 +218,54 @@ background-color:orange;
 	clear:right;/**/
 	margin: 1% 3% 2% 2%;
 }
+
+
+
 .aboutMeFigureLeft {
-	width: 43%;
+	width: 42%;
 	float:left;
 	margin: 1% 2% 1% 1%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
+	border:1px red dotted;
 }
-.aboutMeFigureRight {
-	width: 43%;
-	float:right;
-	margin:1% 0.5% 1% 2%;
+.aboutMeFigureLeft img {
+	width: 100%;
 }
+	.aboutMeFigureRight {
+	width: 36%;
+	float: right;
+	margin: 1% 0.5% 1% 2%;
+	border: 1px green dotted;
+}
+.aboutMeFigureRight img {
+	width: 100%;
+}
+
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeClusterLeft {
-	width: 43%;
+	width: 66%;
 	float:left;
-	margin: 0% 2% 2% 1%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
+	margin: 0% 1% .5% .5%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
 }
 .aboutMeClusterLeft img {width:50%;float:left;}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeClusterRight {
-	width: 43%;
+	width: 66%;
 	float: right;
-	margin: 0% 2% 2% 2%; 
+	margin: 0% .5% .5% 1%; 
 }
 .aboutMeClusterRight img {width: 50%;float: Right;}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeStackRight {
-	width: 43%;
+	width: 39%;
 	float: right;
-	margin: 0% 1% 2% 2%; 
+	margin: 0% .2% .2% 1%; 
 }
 .aboutMeStackRight img {width: 100%;float: left;}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeStackLeft {
-	width: 43%;
+	width: 39%;
 	float: left;
-	margin: 0% 1% 2% 2%; 
+	margin: 0% 1% 0% 1%; 
 }
 .aboutMeStackLeft img {width: 100%;float: left;}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
@@ -610,7 +622,7 @@ width:100%;
 		/*body {font-size: .7rem;}*/
 		/*#navsub {width:14%;} #navsub should not appear on the default (splash) page */
 
-		#navsub a {font-size: .66rem; letter-spacing:normal;}
+	#navsub a {font-size: .66rem; letter-spacing:normal;}
 	#navmain a {font-size: .66rem;letter-spacing: normal;
 	}
 	#sitecontent {width: 100%;/* site content needs to stay wide on splash page. */
@@ -664,20 +676,20 @@ width:100%;
 	}
 	.aboutMeClusterLeft {
 		margin: 0% 2.5% 2% 1.5%;
-		width: 45%;
+		width: 49%;
 	}
 	.aboutMeClusterRight {
 		margin: 0% 2% 2% 1.5%;
-		width: 45%;
+		width: 49%;
 	}
 	.aboutMeStackRight {
-		width: 45%;
-		margin: 0% 2% 2% 2%;
+		width: 24%;
+		margin: 0% .2% .2% 1%;
 	}
 
 	.aboutMeStackLeft {
-		width:45%;
-		margin: 0% 2% 2% 2%;
+		width:24%;
+		margin: 0% 1% .5% .5%;
 	}
 
 	#videoColumn {

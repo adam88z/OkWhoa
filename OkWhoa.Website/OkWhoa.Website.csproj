@@ -890,7 +890,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\images\design\TLV_Menu_6-page_Final-printed2.pdf" />
-    <None Include="Properties\PublishProfiles\OkWhoa.pubxml" />
+    <None Include="Properties\PublishProfiles\okwhoa.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
