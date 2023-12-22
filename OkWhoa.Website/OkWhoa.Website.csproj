@@ -208,7 +208,6 @@
     <Content Include="Content\images\aboutme\Cats\CatStills_040_IMG_1528.jpg" />
     <Content Include="Content\images\aboutme\Military\Admiral_Crowe_BA2C3159.jpg" />
     <Content Include="Content\images\aboutme\Azari-013.jpg" />
-    <Content Include="Content\images\aboutme\BA2C3814.tif" />
     <Content Include="Content\images\aboutme\Backyard\BackyardBabydoll_01.jpg" />
     <Content Include="Content\images\aboutme\Backyard\BackyardBabydoll_02.jpg" />
     <Content Include="Content\images\aboutme\Backyard\BackyardBabydoll_Tucco_01.jpg" />
@@ -237,6 +236,7 @@
     <Content Include="Content\images\aboutme\Backyard\Backyard_Tucco_01.jpg" />
     <Content Include="Content\images\aboutme\Butterfly.jpg" />
     <Content Include="Content\images\aboutme\curry.jpg" />
+    <Content Include="Content\images\aboutme\Military\CannonPlug2.JPG" />
     <Content Include="Content\images\aboutme\Military\sr71_cockpit.jpg" />
     <Content Include="Content\images\aboutme\Trees\DSC_2193_edited.jpg" />
     <Content Include="Content\images\aboutme\Family_01.jpg" />

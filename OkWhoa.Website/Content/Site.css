@@ -59,15 +59,15 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 2px 2px 1px hsla(0,0%,50%,.08);
 }
 
-h1 {font-size: 1rem;}
-h2 {font-size: .85rem;}
-h3 {font-size: .8rem;}
-h4 {font-size: .75rem;color: #5b3a1f;}
-h5 {font-size: .72rem;color: #5b3a1f;}
-h6 {font-size: .69rem;color: #5b3a1f;}
+h1 {font-size: 1.2rem;}
+h2 {font-size: 1rem;}
+h3 {font-size: .85rem;}
+h4 {font-size: .85rem;color: #5b3a1f;}
+h5 {font-size: .77rem;color: #5b3a1f;}
+h6 {font-size: .74rem;color: #5b3a1f;}
 
 .pageTitle { /*page title should span entire screen and maybe not be dependent on fontsize */
-	font-size: 1.05rem;
+	font-size: 1.75rem;
 	padding: 8% 1% 4% 1.5%;
 	line-height: 1.2;
 	color: #aaaaaa; /**/
@@ -94,11 +94,12 @@ strong {
 }
 
 p {
-	font-size: .9rem;
-	line-height: 1.5;
-	margin: .1% .3% 1.2% 1.5%;
-	padding-right: 3%;
-	padding-left: 0;
+	font-size: .8rem;
+	line-height: 1.3;
+	margin: 0 ;
+	padding-right: 6%;
+	padding-left: 3%;
+	padding-bottom: 3%;
 }
 hr {margin:0 0 10px 0;}
 
@@ -106,8 +107,8 @@ hr {margin:0 0 10px 0;}
 /* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
 
 a:link {
-		color: #5378D9;
-		color:red;
+		color: #777777;
+		/*color:red;*/
 		text-decoration: none;
 }
 
@@ -121,13 +122,9 @@ a:visited {
 a:hover, a:active, a:focus {/* this is the class that appears by default */
 	text-decoration: underline;
 	text-decoration: none;
-	color: #5378D9;	
+	color:	green;	
 }
 
-/*   SPLASH PAGE SPECIFIC    */
-.splashcontainer {/*This style will replace .contentcontainer on splash. */ 
-background-color:orange;
-}
 
 #sitecontainer {/*this surrounds everything except the banner.*/
 				position: relative;/*this is to provide positioning context to elements within the sitecontainer - mostly for log-in stuff */
@@ -207,69 +204,76 @@ background-color:orange;
 	max-width: 100px;
 }
 .experienceFigureLeft {
-	width: 43%;
+	width: 42%;
 	float:left;
 	/*clear:right;*/
-	margin:2% 3% 2% 1%;
+	margin:.5% 2% .5% .5%;
 }
 .experienceFigureRight {
-	width: 43%;
+	width: 42%;
 	float:right;
 	clear:right;/**/
-	margin: 1% 3% 2% 2%;
+	margin: .5% .5% .5% 2%;
 }
 
 
 
 .aboutMeFigureLeft {
-	width: 42%;
-	float:left;
-	margin: 1% 2% 1% 1%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
-	border:1px red dotted;
+	width: 36%;
+	float: left;
+	margin: 1% 2% 1% 2%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
+	/*border:1px red dotted;*/
+	/*margin: 0% 0% 0% 0%;*/
 }
 .aboutMeFigureLeft img {
 	width: 100%;
 }
-	.aboutMeFigureRight {
+.aboutMeFigureRight {
 	width: 36%;
 	float: right;
-	margin: 1% 0.5% 1% 2%;
-	border: 1px green dotted;
+	margin: 1% 2% 1% 2%;
+	/*border: 1px green dotted;*/
+	/*margin: 0% 0% 0% 0%;*/
 }
+
 .aboutMeFigureRight img {
 	width: 100%;
 }
 
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeClusterLeft {
-	width: 66%;
+	width: 45%;
 	float:left;
-	margin: 0% 1% .5% .5%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
+	margin: 1% 2% 1% 2%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
 }
 .aboutMeClusterLeft img {width:50%;float:left;}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeClusterRight {
-	width: 66%;
+	width: 45%;
 	float: right;
 	margin: 0% .5% .5% 1%; 
 }
 .aboutMeClusterRight img {width: 50%;float: Right;}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeStackRight {
-	width: 39%;
+	width: 36%;
 	float: right;
-	margin: 0% .2% .2% 1%; 
+	margin: 1% 2% 1% 2%; 
 }
 .aboutMeStackRight img {width: 100%;float: left;}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeStackLeft {
-	width: 39%;
+	width: 30%;
 	float: left;
-	margin: 0% 1% 0% 1%; 
+	margin: 1% 2% 1% 2%; 
 }
 .aboutMeStackLeft img {width: 100%;float: left;}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 
+.Caption {
+	padding: 1%;
+	font-size:x-small;
+}
 #slideshow {
 	height:180px; /* Set in main style sheet - overidden here ???? */
 	height: auto;
@@ -497,26 +501,28 @@ width:100%;
 }
 
 #navsub a { /*the settings here are for the smallest screens (320px wide)*/
-	color:red; /*this needs a complete cache clearing to see the red text s*/
-	font-size:.62rem;
-	background-color:#fafafa; /**/
-	letter-spacing:-1px;/*this works. Great for small screen*/		
-	line-height:1.2;
-	display: block;/*this is needed to make the buttons stack vertically*/
-	padding:4px 1px;/* for smallest screens this needs to be very low */
-	margin:6px 0px; /* for smallest screens these need to be very low */
-	text-align:center;	
+	/* color: red; this needs a complete cache clearing to see the red text s*/
+	color: #444444;
+	font-size: .62rem;
+	background-color: #fafafa; /**/
+	letter-spacing: -1px; /*this works. Great for small screen*/
+	line-height: 1.2;
+	display: block; /*this is needed to make the buttons stack vertically*/
+	padding: 4px 1px; /* for smallest screens this needs to be very low */
+	margin: 6px 0px; /* for smallest screens these need to be very low */
+	text-align: center;
 }
 
-#navmain a:link {/*  */
-	color: green;/* this only happens when the browser is completely purged */
+#navmain a:link { /*  */
+	color: #333333;
+	/* color: green; this only happens when the browser is completely purged */
 	text-decoration: none;
 	border: 1px solid #666666;
-	border-radius:6px;/**/
-	border-top-color:#efefef;
-	border-right-color:#dedede;
-	border-bottom-color:#cccccc;
-	border-left-color:#dddddd;
+	border-radius: 6px; /**/
+	border-top-color: #efefef;
+	border-right-color: #dedede;
+	border-bottom-color: #cccccc;
+	border-left-color: #dddddd;
 }
 #navmain a:visited {
 	color:orange;
@@ -541,7 +547,8 @@ width:100%;
 	border-left-color:#bebebe;
 }
 #navsub a:link {
-	color: red;
+	color: red; /* this is the color that is shown after a cache purge */
+	color:#666666;
 	text-decoration: none;
 	border: 1px solid #666666;
 	border-radius: 6px;/**/
@@ -683,12 +690,12 @@ width:100%;
 		width: 49%;
 	}
 	.aboutMeStackRight {
-		width: 24%;
+		width: 33%;
 		margin: 0% .2% .2% 1%;
 	}
 
 	.aboutMeStackLeft {
-		width:24%;
+		width:33%;
 		margin: 0% 1% .5% .5%;
 	}
 
