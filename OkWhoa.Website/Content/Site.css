@@ -66,6 +66,14 @@ h4 {font-size: .85rem;color: #5b3a1f;}
 h5 {font-size: .77rem;color: #5b3a1f;}
 h6 {font-size: .74rem;color: #5b3a1f;}
 
+p {
+	font-size: .8rem;
+	line-height: 1.3;
+	margin: 0 ;
+	padding-right: 6%;
+	padding-left: 3%;
+	padding-bottom: 3%;
+}
 .pageTitle { /*page title should span entire screen and maybe not be dependent on fontsize */
 	font-size: 1.75rem;
 	padding: 8% 1% 4% 1.5%;
@@ -93,14 +101,7 @@ strong {
 	color: #78653b;
 }
 
-p {
-	font-size: .8rem;
-	line-height: 1.3;
-	margin: 0 ;
-	padding-right: 6%;
-	padding-left: 3%;
-	padding-bottom: 3%;
-}
+
 hr {margin:0 0 10px 0;}
 
 
@@ -153,6 +154,9 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 	border-radius: 0 0 18px 18px;
 
 }
+#pageContent {
+	background-color: #fc0000; /*don't think this is used anywhere*/
+}
 #photography { /*sitecontentPhotography is for the Photography page. It's meant to override some of the #sitecontent settings. */
 	/*padding: 16px .1% 0% .1%;  this was set to "33px 2% 0% 1.5%;" before. */
 	/*margin: 0px auto;  why 1px? 
@@ -170,9 +174,7 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 	height:100%;
 	min-height: 400px;
 }
-#pageContent {
-	background-color: #fc0000; /*don't think this is used anywhere*/
-}
+
 .masterBanner {/* this is the class applied to IMGs in the header*/
 	width: 100%;
 	max-height:300px;
@@ -191,7 +193,6 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 	padding: 2% 3% 1% 2%;
 	border-radius:2%;
     width:33%;
-	
 	box-shadow:2px 2px 2px hsla(3,90%,30%,.1);
 	/*clear:left;*/
 }
@@ -203,73 +204,80 @@ a:hover, a:active, a:focus {/* this is the class that appears by default */
 	/*border:1px solid blue;*/
 	max-width: 100px;
 }
+
 .experienceFigureLeft {
-	width: 42%;
+	width: 30%;
 	float:left;
 	/*clear:right;*/
 	margin:.5% 2% .5% .5%;
 }
 .experienceFigureRight {
-	width: 42%;
+	width: 30%;
 	float:right;
 	clear:right;/**/
 	margin: .5% .5% .5% 2%;
 }
 
-
-
 .aboutMeFigureLeft {
-	width: 36%;
+	width: 30%;
 	float: left;
 	margin: 1% 2% 1% 2%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
 	/*border:1px red dotted;*/
+	/*margin: 0% 0% 0% 0%;*/
+	/*border: 1px green dotted;*/
 	/*margin: 0% 0% 0% 0%;*/
 }
 .aboutMeFigureLeft img {
 	width: 100%;
 }
 .aboutMeFigureRight {
-	width: 36%;
+	width: 30%;
 	float: right;
 	margin: 1% 2% 1% 2%;
-	/*border: 1px green dotted;*/
-	/*margin: 0% 0% 0% 0%;*/
 }
-
 .aboutMeFigureRight img {
 	width: 100%;
 }
-
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeClusterLeft {
-	width: 45%;
+	width: 40%;
 	float:left;
 	margin: 1% 2% 1% 2%; /* at small screen sizes there won't be a left-hand column. At larger screen sizes it's assumed  there will be empty space under the nav menu.*/
 }
-.aboutMeClusterLeft img {width:50%;float:left;}
-/*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
+.aboutMeClusterLeft img {
+	width:50%;
+	float:left;
+}
 .aboutMeClusterRight {
-	width: 45%;
+	width: 40%;
 	float: right;
 	margin: 0% .5% .5% 1%; 
 }
-.aboutMeClusterRight img {width: 50%;float: Right;}
-/*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
-.aboutMeStackRight {
-	width: 36%;
-	float: right;
-	margin: 1% 2% 1% 2%; 
+.aboutMeClusterRight img {
+	width: 50%;
+	float: Right;
+
 }
-.aboutMeStackRight img {width: 100%;float: left;}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
 .aboutMeStackLeft {
 	width: 30%;
 	float: left;
 	margin: 1% 2% 1% 2%; 
 }
-.aboutMeStackLeft img {width: 100%;float: left;}
+.aboutMeStackLeft img {
+	width: 100%;
+	float: left;
+}
+.aboutMeStackRight {
+	width: 30%;
+	float: right;
+	margin: 1% 2% 1% 2%; 
+}
+.aboutMeStackRight img {
+	width: 100%;
+	float: left;
+}
 /*  -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  */
-
 .Caption {
 	padding: 1%;
 	font-size:x-small;
@@ -673,29 +681,29 @@ width:100%;
 		padding-top: 2%;
 	}
 	.aboutMeFigureLeft {
-		width: 45%;
+		width: 36%;
 		margin:0% 2.5% 2% 1.5%;/* setting a negative left margin moves the photos into the menu column. This assumes the column is empty */
 	}
 	.aboutMeFigureRight {
-		width: 45%;
+		width: 36%;
 		/*clear:right;*/
 		margin:0% 2% 2% 2.5%;/*this allows the photo to occupy dead space under the navsub menu*/
 	}
 	.aboutMeClusterLeft {
 		margin: 0% 2.5% 2% 1.5%;
-		width: 49%;
+		width: 40%;
 	}
 	.aboutMeClusterRight {
 		margin: 0% 2% 2% 1.5%;
-		width: 49%;
+		width: 40%;
 	}
 	.aboutMeStackRight {
-		width: 33%;
+		width: 36%;
 		margin: 0% .2% .2% 1%;
 	}
 
 	.aboutMeStackLeft {
-		width:33%;
+		width:36%;
 		margin: 0% 1% .5% .5%;
 	}
 
